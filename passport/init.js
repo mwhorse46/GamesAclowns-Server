@@ -1,6 +1,6 @@
 var facebook = require('./facebook');
 var twitter = require('./twitter');
-var User = require('../models/user');
+//var User = require('../models/user');
 
 module.exports = function(passport){
 
