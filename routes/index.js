@@ -27,6 +27,9 @@ module.exports = function(passport){
 		res.render('home.html');
 	});
 
+	router.get('/layout',function (req, res) {
+		res.render('layout.html');
+	})
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {
 		req.logout();
