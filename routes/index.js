@@ -13,6 +13,10 @@ var isAuthenticated = function (req, res, next) {
 
 module.exports = function(passport){
 
+	router.get('/',function (req, res) {
+		res.render('index_home.html');
+	})
+
 	/* GET login page. */
 	router.get('/index', function(req, res) {
     	// Display the Login page with any flash message, if any
@@ -38,7 +42,7 @@ module.exports = function(passport){
 
 	// route for facebook authentication and login
 	// different scopes while logging in
-	router.get('/',
+	router.get('/dash',
 		passport.authenticate('facebook', { scope : 'email' }
 	));
 
