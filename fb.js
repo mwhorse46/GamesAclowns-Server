@@ -1,6 +1,6 @@
 // facebook app settings
 module.exports = {
-	'appID' : '1427339234242387',
-	'appSecret' : 'ecaa02f4cd93ca837f38c0746b91c4e8',
+	'appID' : '971412206281096',
+	'appSecret' : '34cf1ebea53dbf7c01ddcfd24e1f22c2',
 	'callbackUrl' : 'http://ec2-52-89-20-189.us-west-2.compute.amazonaws.com/login/facebook/callback'
 }
