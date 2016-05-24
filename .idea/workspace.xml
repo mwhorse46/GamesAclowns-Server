@@ -4,7 +4,6 @@
     <list default="true" id="762eaf90-52e0-41d2-ab23-af1d594a4ca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/test.jade" afterPath="$PROJECT_DIR$/views/test.jade" />
     </list>
     <ignored path="passport-social-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,15 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="237" column="35" selection-start-line="237" selection-start-column="27" selection-end-line="237" selection-end-column="35" />
+            <state relative-caret-position="137">
+              <caret line="237" column="83" selection-start-line="237" selection-start-column="83" selection-end-line="237" selection-end-column="83" />
               <folding>
-                <marker date="1464116774000" expanded="true" signature="4546:4569" placeholder="..." />
-                <marker date="1464116774000" expanded="true" signature="4546:4598" placeholder="..." />
-                <marker date="1464116774000" expanded="true" signature="7280:8021" placeholder="..." />
+                <marker date="1464116982000" expanded="true" signature="4546:4569" placeholder="..." />
+                <marker date="1464116982000" expanded="true" signature="4546:4598" placeholder="..." />
+                <marker date="1464116982000" expanded="true" signature="7280:8023" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -72,7 +71,7 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datalayer/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-56">
+            <state relative-caret-position="-256">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
@@ -111,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/test.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
+            <state relative-caret-position="212">
               <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
               <folding />
             </state>
@@ -176,8 +175,8 @@
         <option value="$PROJECT_DIR$/utils/config.js" />
         <option value="$PROJECT_DIR$/views/home.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/test.jade" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -443,12 +442,12 @@
       <workItem from="1463945362944" duration="3849000" />
       <workItem from="1463981120746" duration="9465000" />
       <workItem from="1464026532311" duration="24114000" />
-      <workItem from="1464103262061" duration="9103000" />
+      <workItem from="1464103262061" duration="9274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46531000" />
+    <option name="totallyTimeSpent" value="46702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
@@ -532,9 +531,9 @@
         <state relative-caret-position="390">
           <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
-            <marker date="1464116774000" expanded="true" signature="4546:4569" placeholder="..." />
-            <marker date="1464116774000" expanded="true" signature="4546:4598" placeholder="..." />
-            <marker date="1464116774000" expanded="true" signature="7280:8021" placeholder="..." />
+            <marker date="1464116982000" expanded="true" signature="4546:4569" placeholder="..." />
+            <marker date="1464116982000" expanded="true" signature="4546:4598" placeholder="..." />
+            <marker date="1464116982000" expanded="true" signature="7280:8023" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -766,14 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datalayer/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fb_local.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -798,23 +789,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/views/test.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="237" column="35" selection-start-line="237" selection-start-column="27" selection-end-line="237" selection-end-column="35" />
-          <folding>
-            <marker date="1464116774000" expanded="true" signature="4546:4569" placeholder="..." />
-            <marker date="1464116774000" expanded="true" signature="4546:4598" placeholder="..." />
-            <marker date="1464116774000" expanded="true" signature="7280:8021" placeholder="..." />
-          </folding>
+        <state relative-caret-position="212">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/test.jade">
+    <entry file="file://$PROJECT_DIR$/datalayer/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        <state relative-caret-position="-256">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="237" column="83" selection-start-line="237" selection-start-column="83" selection-end-line="237" selection-end-column="83" />
+          <folding>
+            <marker date="1464116982000" expanded="true" signature="4546:4569" placeholder="..." />
+            <marker date="1464116982000" expanded="true" signature="4546:4598" placeholder="..." />
+            <marker date="1464116982000" expanded="true" signature="7280:8023" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

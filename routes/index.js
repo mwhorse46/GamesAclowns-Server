@@ -235,7 +235,7 @@ module.exports = function(passport){
 				if(choice != false){
 					var charimage	=	choice.charimage;
 					choice.charimage	=	config.runningHost+"/images/"+charimage;
-					choice.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choice.pk_choiceid + ".png";
+					choice.og_image	=	config.runningHost+"/images/user/" + choice.userid + '_' + choice.pk_choiceid + ".png";
 					console.log("GENEREATE")
 					console.log(choice)
 					res.render('test',choice);
