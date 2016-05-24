@@ -1,4 +1,5 @@
 var facebook = require('./facebook');
+var getConnection   =   require('../utils/mysql-connector');
 //var User = require('../models/user');
 
 module.exports = function(passport){
@@ -10,15 +11,24 @@ module.exports = function(passport){
     });
 
     passport.deserializeUser(function(id, done) {
-        // User.findById(id, function(err, user) {
-        //     console.log('deserializing user:',user);
-        //     done(err, user);
-        // });
 
-        done(null,id)
+        var bkp_id  =   id;
+        if(id != null && id != undefined && id.userid != undefined){
+            id  =   id.userid;
+        }
+        console.log("Deserializing");
+        console.log(id);
+        getConnection(function (err, Connector) {
+           Connector.query('select * from tbl_user where userid = ?',[id],function (err, user) {
+               if(!err && user != null && user.length > 0)
+                   done(null,user[0]);
+               else
+                    done(null,bkp_id);
+           })
+        });
+
     });
 
-    // Setting up Passport Strategies for Facebook and Twitter
     facebook(passport);
 
-}
+};

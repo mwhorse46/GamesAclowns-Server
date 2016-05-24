@@ -1,6 +1,12 @@
 var FacebookStrategy = require('passport-facebook').Strategy;
 //var User = require('../models/user');
-var fbConfig = require('../fb.js');
+var getConnection   =   require('../utils/mysql-connector')
+
+var host    =   process.env.RUNNING_HOST;
+if(host == 1)
+    var fbConfig = require('../fb.js');
+else
+    var fbConfig = require('../fb_local.js');
 
 module.exports = function(passport) {
 
@@ -8,7 +14,7 @@ module.exports = function(passport) {
         clientID        : fbConfig.appID,
         clientSecret    : fbConfig.appSecret,
         callbackURL     : fbConfig.callbackUrl,
-		profileFields: ["id", "email", "first_name", "gender", "last_name"]
+		profileFields: ["id", "email", "first_name", "gender", "last_name","picture.type(large)"]
     },
 
     // facebook will send back the tokens and profile
@@ -19,40 +25,103 @@ module.exports = function(passport) {
 		// asynchronous
 		process.nextTick(function() {
 
-			// find the user in the database based on their facebook id
-            // User.findOne({ 'id' : profile.id }, function(err, user) {
-            //
-	        	// // if there is an error, stop everything and return that
-	        	// // ie an error connecting to the database
-	         //    if (err)
-	         //        return done(err);
-            //
-			// 	// if the user is found, then log them in
-	         //    if (user) {
-	         //        return done(null, user); // user found, return that user
-	         //    } else {
-	         //        // if there is no user found with that facebook id, create them
-	         //        var newUser = new User();
-            //
-			// 		// set all of the facebook information in our user model
-	         //        newUser.fb.id    = profile.id; // set the users facebook id
-	         //        newUser.fb.access_token = access_token; // we will save the token that facebook provides to the user
-	         //        newUser.fb.firstName  = profile.name.givenName;
-	         //        newUser.fb.lastName = profile.name.familyName; // look at the passport user profile to see how names are returned
-	         //        newUser.fb.email = profile.emails[0].value; // facebook can return multiple emails so we'll take the first
-            //
-			// 		// save our user to the database
-	         //        newUser.save(function(err) {
-	         //            if (err)
-	         //                throw err;
-            //
-	         //            // if successful, return the new user
-	         //            return done(null, newUser);
-	         //        });
-	         //    }
-            //
-	        // });
-			return done(null,profile);
+
+            getConnection(function (err, Connector) {
+                if(!err){
+                    Connector.query("select * from tbl_user where userid = ?",[profile.id],function (err, userInfo) {
+                        console.log(err);
+                        console.log(userInfo);
+
+                        if(err){
+                            return done(err);
+                        }
+                        if(!err && userInfo != null && userInfo != undefined && userInfo.length > 0){
+
+                            var user =   userInfo[0];
+                            //return done(null,user);
+
+                            var gender_ =   profile.gender=='male' ? 1:0;
+                            var email_  =   "";
+                            var photos_ =   "";
+
+                            if(profile.emails != undefined){
+                                if(profile.emails[0] != null
+                                    && profile.emails[0] != undefined
+                                    && profile.emails[0].value != undefined) {
+                                    email_ = profile.emails[0].value
+                                }
+                            }
+
+                            if(profile.photos != undefined){
+                                if(profile.photos[0] != null
+                                    && profile.photos[0] != undefined
+                                    && profile.photos[0].value != undefined) {
+                                    photos_ = profile.photos[0].value
+                                }
+                            }
+
+                            var userInfo    =   {
+                                name    :   profile.name.givenName,
+                                emailid :   email_,
+                                gender  :   gender_,
+                                image   :   photos_,
+                                token   :   access_token
+                            };
+                            Connector.query("update tbl_user set ? where userid = ?",[userInfo,user.userid],function (err, userstatus) {
+                                if(err){
+                                    throw err;
+                                }else{
+                                    Connector.query('select * from tbl_user where userid = ?',[user.userid],function (err, userData) {
+                                        return done(null,userData[0]);
+                                    })
+                                }
+                            });
+
+
+                        }else{
+
+                            var gender_ =   profile.gender=='male' ? 1:0;
+                            var email_  =   "";
+                            var photos_ =   "";
+
+                            if(profile.emails != undefined){
+                                if(profile.emails[0] != null
+                                    && profile.emails[0] != undefined
+                                    && profile.emails[0].value != undefined) {
+                                    email_ = profile.emails[0].value
+                                }
+                            }
+
+                            if(profile.photos != undefined){
+                                if(profile.photos[0] != null
+                                    && profile.photos[0] != undefined
+                                    && profile.photos[0].value != undefined) {
+                                    photos_ = profile.photos[0].value
+                                }
+                            }
+
+                            var user    =   {
+                                userid  :   profile.id,
+                                name    :   profile.name.givenName,
+                                emailid :   email_,
+                                gender  :   gender_,
+                                image   :   photos_,
+                                token   :   access_token
+                            };
+                            Connector.query("insert into tbl_user set ?",user,function (err, userstatus) {
+                                if(err){
+                                    throw err;
+                                }else{
+                                    Connector.query('select * from tbl_user where userid = ?',[profile.id],function (err, userData) {
+                                        return done(null,userData[0]);
+                                    })
+                                }
+                            });
+                        }
+                    })
+                }
+            });
+
         });
 
     }));
