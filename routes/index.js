@@ -192,6 +192,7 @@ module.exports = function(passport){
 											var charimage	=	choicesInfo.charimage;
 											choicesInfo.charimage	=	config.runningHost+"/images/"+charimage;
 											choicesInfo.redirect	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
+											choicesInfo.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choiceInfo.pk_choiceid + ".png";
 											res.render('home', choicesInfo);
 										});
 									});
@@ -233,7 +234,8 @@ module.exports = function(passport){
 			userManager.getchoice(userinfo,function (err, choice) {
 				if(choice != false){
 					var charimage	=	choice.charimage;
-					choice.charimage	=	config.runningHost+"/images/"+charimage
+					choice.charimage	=	config.runningHost+"/images/"+charimage;
+					choice.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choice.pk_choiceid + ".png";
 					console.log("GENEREATE")
 					console.log(choice)
 					res.render('test',choice);
