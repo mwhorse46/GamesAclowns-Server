@@ -22,13 +22,18 @@ html(lang='en')
      //#fb-share-co
      //  .fb-share-button(data-href='http://ec2-52-89-20-189.us-west-2.compute.amazonaws.com/layout', data-layout='link')
      h1 Welcome #{name}
-     //img(alt='Bootstrap Image Preview', src=choosedImage)
-    .container-fluid(style='background: chartreuse;width: 1000px; height: 500px;')
-        .row
-            .col-md-6
-                img(alt='Bootstrap Image Preview', src=userimage)
-            .col-md-6
-                img(width='200px' height='200px' alt='character', src=charimage)
+     table(style='height: 304px; border-color: #ffffff; background-color: #cccccc;', width='550')
+        tbody
+            tr
+                td
+                    table(style='height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;', width='496')
+                        tbody
+                            tr
+                                td
+                                    img(src=userimage, alt='', width='120', height='120')
+                                td
+                                    img(src=charimage, alt='', width='120', height='120')
+
 
     #fb-root
     script.
