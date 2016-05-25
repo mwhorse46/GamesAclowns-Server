@@ -241,7 +241,7 @@ module.exports = function(passport){
 											var charimage	=	choicesInfo.charimage;
 											choicesInfo.charimage	=	config.runningHost+"/images/"+charimage;
 											choicesInfo.redirect	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
-											choicesInfo.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choiceInfo.pk_choiceid + ".png?"+Math.floor(Math.random()*90000) + 10000;
+											choicesInfo.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choiceInfo.pk_choiceid + ".png?z="+Math.floor(Math.random()*90000) + 10000;
 											res.render('home', choicesInfo);
 										});
 									});
@@ -284,7 +284,7 @@ module.exports = function(passport){
 				if(choice != false){
 					var charimage	=	choice.charimage;
 					choice.charimage	=	config.runningHost+"/images/"+charimage;
-					choice.og_image	=	config.runningHost+"/images/user/" + choice.userid + '_' + choice.pk_choiceid + ".png"+Math.floor(Math.random()*90000) + 10000;
+					choice.og_image	=	config.runningHost+"/images/user/" + choice.userid + '_' + choice.pk_choiceid + ".png";
 					choice.redirect	=	config.runningHost + '/choosed/reaction/' + choice.userid + '/' + choice.pk_choiceid;
 					console.log("GENEREATE")
 					console.log(choice)
