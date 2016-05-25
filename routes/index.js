@@ -210,18 +210,18 @@ module.exports = function(passport){
 								// 		height: 768
 								// 		},
 								shotSize: {
-									width: 500
-									, height: 300
+									width: 605
+									, height: 320
 								},
 								siteType: 'html'
 							};
 							//var htmlForm = '<div style="background: chartreuse;width: 1000px; height: 500px;" class="container-fluid"> <div class="row"> <div class="col-md-6"><img width="200px" height="200px"  alt="Bootstrap Image Preview" src="' + user.image + '"/></div><div class="col-md-6"><img width="200px" height="200px" alt="character" src="http:localhost:8000/images/' + imageData.image + '"/></div></div></div>'
 							var head = '<head><link href="/assets/css/bootstrap.css" rel="stylesheet"/><script type="text/javascript" src="/assets/js/jquery.min.js"></script><script type="text/javascript" src="/assets/js/bootstrap.min.js"></script></head>'
 							console.log(htmlForm)
-							var htmlForm	=	'<table style="height: 304px; border-color: #ffffff; background-color: #cccccc;" width="550"><tbody><tr><td><table style="height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;" width="496"><tbody><tr><td><img src="'+user.image+'" alt="" width="120" height="120"/></td><td><img src="'+config.runningHost+'/images/' + imageData.image + '" alt="" width="120" height="120"/></td></tr></tbody></table></td></tr></tbody></table>'
+							var htmlForm	=	'<table style="height: 320px; width: 605px; border-color: #ffffff; background: url('+config.runningHost+'/images/app_bg.jpg);"><tbody><tr><td><table style="height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;" width="496"><tbody><tr><td><img src="'+user.image+'" alt="" width="120" height="120"/></td><td><img src="'+config.runningHost+'/images/' + imageData.image + '" alt="" width="120" height="120"/></td></tr></tbody></table></td></tr></tbody></table>'
 							var url	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
 							url		=	"<html><body>"+htmlForm+"</body></html>";
-
+console.log(url);
 							webshot(url, user.userid + '_' + choiceInfo.pk_choiceid + ".png", option, function (err) {
 								// screenshot now saved to hello_world.png
 								console.log(err);
@@ -341,6 +341,10 @@ module.exports = function(passport){
 	router.get('/admin/signout',isAdminAuthenticated, function(req, res) {
 		req.logout();
 		res.redirect('/angryadmin');
+	});
+
+	router.get('/tests',function (req, res) {
+		res.render('test2');
 	});
 
 
