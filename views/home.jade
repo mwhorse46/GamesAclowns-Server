@@ -23,29 +23,32 @@ html(lang='en')
      //  .fb-share-button(data-href='http://ec2-52-89-20-189.us-west-2.compute.amazonaws.com/layout', data-layout='link')
      h1 Welcome #{name}
      .storage#storage(url=redirect)
-     table(style='height: 304px; border-color: #ffffff; background-color: #cccccc;', width='550')
-        tbody
-            tr
-                td
-                    table(style='height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;', width='496')
-                        tbody
-                            tr
-                                td
-                                    img(src=userimage, alt='', width='120', height='120')
-                                td
-                                    img(src=charimage, alt='', width='120', height='120')
+     img(src=og_image, alt='')
+     br
+     a.btnShare(href=redirect, data-image=og_image, data-title='Your Reaction', data-desc='Checkout your current reaction') Share
+     //table(style='height: 304px; border-color: #ffffff; background-color: #cccccc;', width='550')
+     //   tbody
+     //       tr
+     //           td
+     //               table(style='height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;', width='496')
+     //                   tbody
+     //                       tr
+     //                           td
+     //                               img(src=userimage, alt='', width='120', height='120')
+     //                           td
+     //                               img(src=charimage, alt='', width='120', height='120')
 
 
-    #fb-root
-    script.
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.5&appId=971412206281096";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    // Your share button code
-    #fb-share-co
-      .fb-share-button(data-href=redirect, data-layout='button')
+    //#fb-root
+    //script.
+    //  (function(d, s, id) {
+    //  var js, fjs = d.getElementsByTagName(s)[0];
+    //  if (d.getElementById(id)) return;
+    //  js = d.createElement(s); js.id = id;
+    //  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.5&appId=971412206281096";
+    //  fjs.parentNode.insertBefore(js, fjs);
+    //  }(document, 'script', 'facebook-jssdk'));
+    //// Your share button code
+    //#fb-share-co
+    //  .fb-share-button(data-href=redirect, data-layout='button')
 
