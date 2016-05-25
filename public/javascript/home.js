@@ -23,6 +23,7 @@ $('document').ready(function () {
             id: [url],
             scrape: true
         }, function(response) {
+            console.log(response)
             if(!response || response.error){
                 masterdfd.reject(response);
             }else{
@@ -126,7 +127,9 @@ $('document').ready(function () {
     }
 
     var url_to_scrap    =   $("#storage").attr('url');
+    var img_url_scrap   =   $("#storage_image").attr('url');
     console.log(url_to_scrap);
+    console.log(img_url_scrap);
 
     if(url_to_scrap != "" && url_to_scrap != undefined){
         // $.post(
@@ -140,7 +143,8 @@ $('document').ready(function () {
         //         console.log(response);
         //     }
         // );
-        scrapeLink(url_to_scrap)
+        scrapeLink(url_to_scrap);
+        scrapeLink(img_url_scrap)
     }
 
 

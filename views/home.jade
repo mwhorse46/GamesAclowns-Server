@@ -29,6 +29,7 @@ html(lang='en')
      //  .fb-share-button(data-href='http://ec2-52-89-20-189.us-west-2.compute.amazonaws.com/layout', data-layout='link')
      h1 Welcome #{name}
      .storage#storage(url=redirect)
+     .storage_image#storage_image(url=og_image)
      img(src=og_image, alt='')
      br
      a.btnShare(href=redirect, data-image=og_image, data-title='Your Reaction', data-desc='Checkout your current reaction') Share
