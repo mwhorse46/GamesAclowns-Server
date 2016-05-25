@@ -218,7 +218,7 @@ module.exports = function(passport){
 							//var htmlForm = '<div style="background: chartreuse;width: 1000px; height: 500px;" class="container-fluid"> <div class="row"> <div class="col-md-6"><img width="200px" height="200px"  alt="Bootstrap Image Preview" src="' + user.image + '"/></div><div class="col-md-6"><img width="200px" height="200px" alt="character" src="http:localhost:8000/images/' + imageData.image + '"/></div></div></div>'
 							var head = '<head><link href="/assets/css/bootstrap.css" rel="stylesheet"/><script type="text/javascript" src="/assets/js/jquery.min.js"></script><script type="text/javascript" src="/assets/js/bootstrap.min.js"></script></head>'
 							console.log(htmlForm)
-							var htmlForm	=	'<table style="height: 304px; border-color: #ffffff; background-color: #cccccc;" width="550"><tbody><tr><td><table style="height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;" width="496"><tbody><tr><td><img src="'+user.image+'" alt="" width="120" height="120"/></td><td><img src="http:localhost:8000/images/' + imageData.image + '" alt="" width="120" height="120"/></td></tr></tbody></table></td></tr></tbody></table>'
+							var htmlForm	=	'<table style="height: 304px; border-color: #ffffff; background-color: #cccccc;" width="550"><tbody><tr><td><table style="height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;" width="496"><tbody><tr><td><img src="'+user.image+'" alt="" width="120" height="120"/></td><td><img src="'+config.runningHost+'/images/' + imageData.image + '" alt="" width="120" height="120"/></td></tr></tbody></table></td></tr></tbody></table>'
 							var url	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
 							url		=	"<html><body>"+htmlForm+"</body></html>";
 
@@ -283,6 +283,7 @@ module.exports = function(passport){
 					var charimage	=	choice.charimage;
 					choice.charimage	=	config.runningHost+"/images/"+charimage;
 					choice.og_image	=	config.runningHost+"/images/user/" + choice.userid + '_' + choice.pk_choiceid + ".png";
+					choice.redirect	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choice.pk_choiceid;
 					console.log("GENEREATE")
 					console.log(choice)
 					res.render('test',choice);

@@ -1,13 +1,6 @@
 html(lang='en')
    head
      meta(charset='UTF-8')
-     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js')
-     script(type='text/javascript', src='/javascript/home.js')
-     script(type='text/javascript', src='/assets/js/bootstrap.min.js')
-     link(href='/assets/css/bootstrap.css', rel='stylesheet')
-     link(href='/assets/css/font-awesome.css', rel='stylesheet')
-     link(href='/assets/css/bootstrap-theme.css', rel='stylesheet')
      meta(property='og:url', content=redirect)
      meta(property='og:type', content='website')
      meta(property='fb:app_id', content='971412206281096')
@@ -17,9 +10,16 @@ html(lang='en')
      meta(property='og:image:width', content='600')
      meta(property='og:image:height', content='315' )
      meta(itemprop='image', content=og_image)
+     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js')
+     script(type='text/javascript', src='/javascript/home.js')
+     script(type='text/javascript', src='/assets/js/bootstrap.min.js')
+     link(href='/assets/css/bootstrap.css', rel='stylesheet')
+     link(href='/assets/css/font-awesome.css', rel='stylesheet')
+     link(href='/assets/css/bootstrap-theme.css', rel='stylesheet')
 
    body
-
+       .storage#storage(url=redirect)
        table(style='height: 304px; border-color: #ffffff; background-color: #cccccc;', width='550')
            tbody
                tr

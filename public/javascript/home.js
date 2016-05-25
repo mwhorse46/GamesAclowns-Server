@@ -93,4 +93,21 @@ $('document').ready(function () {
         }
     }
 
+    var url_to_scrap    =   $("#storage").attr('url');
+    console.log(url_to_scrap);
+
+    if(url_to_scrap != "" && url_to_scrap != undefined){
+        $.post(
+            'https://graph.facebook.com',
+            {
+                id: url_to_scrap,
+                scrape: true
+            },
+            function(response){
+                console.log("SCRAP")
+                console.log(response);
+            }
+        );
+    }
+
 });
