@@ -22,8 +22,10 @@ module.exports = function(passport){
            Connector.query('select * from tbl_user where userid = ?',[id],function (err, user) {
                if(!err && user != null && user.length > 0)
                    done(null,user[0]);
-               else
-                    done(null,bkp_id);
+               else {
+
+                   done(null, bkp_id);
+               }
            })
         });
 
