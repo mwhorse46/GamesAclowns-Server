@@ -6,12 +6,13 @@
 var getConnection   =   require('../utils/mysql-connector');
 exports.addImage    =   function (req, res) {
 console.log(req.body)
-    if(req.body.image && req.body.dialog && req.body.gender){
+    if(req.body.image && req.body.dialog && req.body.gender && req.user && req.user.adminid){
 
         var data    =   {
             image   :   req.body.image,
             gender  :   req.body.gender,
-            dialogue:   req.body.dialog
+            dialogue:   req.body.dialog,
+            fk_admin:   req.user.adminid
         };
 
         getConnection(function (err, Connector) {
