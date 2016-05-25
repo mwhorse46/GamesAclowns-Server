@@ -47,6 +47,8 @@ var isAdminAuthenticated = function (req, res, next) {
 	}else{
 		if(req.path == '/angryadmin')
 			res.render('login');
+		else if(req.path == '/imageUpload')
+			res.send("session");
 		else
 			res.redirect('/angryadmin')
 	}
@@ -73,7 +75,7 @@ module.exports = function(passport){
 	var onLimit = false;
 	var hashedImageName = "imageName";
 
-	router.post('/imageUpload',  multer({
+	router.post('/imageUpload', isAdminAuthenticated, multer({
 		limits: {
 			fileSize: 20000000 //20MB
 		},

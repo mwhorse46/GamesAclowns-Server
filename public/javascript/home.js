@@ -78,6 +78,9 @@ $('document').ready(function () {
                 type: 'POST',
                 success: function (data, status, req) {
                     imageUploadTapped = false;
+                    if(data == "session"){
+                        window.location.replace('/angryadmin');
+                    }
                     callback(false, data);
                 },
                 error: function (req, status, error) {
