@@ -220,8 +220,10 @@ module.exports = function(passport){
 							console.log(htmlForm)
 							var htmlForm	=	'<table style="height: 315px; width: 600px; border-color: #ffffff; background: url('+config.runningHost+'/images/app_bg.jpg);"><tbody><tr><td><table style="height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;" width="496"><tbody><tr><td style="padding-left: 78px; padding-bottom: 7px;"><img src="'+user.image+'" alt="" width="120" height="120"/></td><td style="padding-right: 48px; padding-bottom: 7px;"><img src="'+config.runningHost+'/images/' + imageData.image + '" alt="" width="120" height="120"/></td></tr></tbody></table></td></tr></tbody></table>'
 							var url	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
-							url		=	'<html><body style="margin:0 !important;">'+htmlForm+'</body></html>';
-console.log(url);
+
+							htmlForm	=	'<body style="margin: 0 !important;"> <div style="background: url('+config.runningHost+'/images/app_bg.jpg); background-size: cover; height: 315px; width: 600px;"> <div style=" width: 50%; float: left; text-align: center;"> <img src="'+user.image+'" style="width: 50%;height: 125px;margin-top: 90px;border: 1px dashed white;padding: 5px 5px;"> </div><div style=" width: 50%; float: left; text-align: center;"> <img src="'+config.runningHost+'/images/' + imageData.image + '" style="width: 50%;height: 125px;margin-top: 90px;border: 1px dashed white;padding: 5px 5px;"> </div><div style="text-align: center;color: white;padding-top: 225px;" > <h3>'+choicesInfo.dialogue+'</h3> </div></div></body>'
+							url		=	'<html>'+htmlForm+'</html>';
+							console.log(url);
 							webshot(url, user.userid + '_' + choiceInfo.pk_choiceid + ".png", option, function (err) {
 								// screenshot now saved to hello_world.png
 								console.log(err);
