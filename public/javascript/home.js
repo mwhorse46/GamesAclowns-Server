@@ -8,7 +8,8 @@ $('document').ready(function () {
     (function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
         if(d.getElementById(id)) {return;}
         js = d.createElement('script'); js.id = id;
-        js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+        js.async = true;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.5&appId=971412206281096";
         ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
 
     function postToFeed(title, desc, url, image){
@@ -16,6 +17,21 @@ $('document').ready(function () {
         function callback(response){}
         FB.ui(obj, callback);
     }
+    function scrapeLink(url){
+        var masterdfd = $.Deferred();
+        FB.api('https://graph.facebook.com/', 'post', {
+            id: [url],
+            scrape: true
+        }, function(response) {
+            if(!response || response.error){
+                masterdfd.reject(response);
+            }else{
+                masterdfd.resolve(response);
+            }
+        });
+        return masterdfd;
+    }
+
 
     var imageUploadTapped   =   false;
 
@@ -113,18 +129,20 @@ $('document').ready(function () {
     console.log(url_to_scrap);
 
     if(url_to_scrap != "" && url_to_scrap != undefined){
-        $.post(
-            'https://graph.facebook.com/989506491086988',
-            {
-                id: url_to_scrap,
-                scrape: true
-            },
-            function(response){
-                console.log("SCRAP")
-                console.log(response);
-            }
-        );
+        // $.post(
+        //     'https://graph.facebook.com/989506491086988',
+        //     {
+        //         id: url_to_scrap,
+        //         scrape: true
+        //     },
+        //     function(response){
+        //         console.log("SCRAP")
+        //         console.log(response);
+        //     }
+        // );
+        scrapeLink(url_to_scrap)
     }
+
 
     $('.btnShare').click(function(){
         elem = $(this);

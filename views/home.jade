@@ -9,15 +9,15 @@ html(lang='en')
      link(href='assets/css/font-awesome.css', rel='stylesheet')
      link(href='assets/css/bootstrap-theme.css', rel='stylesheet')
    body
-     //#fb-root
-     //script.
-     //  (function(d, s, id) {
-     //  var js, fjs = d.getElementsByTagName(s)[0];
-     //  if (d.getElementById(id)) return;
-     //  js = d.createElement(s); js.id = id;
-     //  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.5&appId=971412206281096";
-     //  fjs.parentNode.insertBefore(js, fjs);
-     //  }(document, 'script', 'facebook-jssdk'));
+     #fb-root
+     script.
+       (function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.5&appId=971412206281096";
+       fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
      //// Your share button code
      //#fb-share-co
      //  .fb-share-button(data-href='http://ec2-52-89-20-189.us-west-2.compute.amazonaws.com/layout', data-layout='link')
