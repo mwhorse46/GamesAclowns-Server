@@ -22,17 +22,9 @@ html(lang='en')
 
    body
        .storage#storage(url=redirect)
-       table(style='height: 304px; border-color: #ffffff; background-color: #cccccc;', width='550')
-           tbody
-               tr
-                   td
-                       table(style='height: 174px; border-color: #ffffff; margin-left: auto; margin-right: auto;', width='496')
-                           tbody
-                               tr
-                                   td
-                                       img(src=userimage, alt='', width='120', height='120')
-                                   td
-                                       img(src=charimage, alt='', width='120', height='120')
+       .storage_image#storage_image(url=og_image)
+       img(src=og_image, alt='')
+
 
     a(href='/dash') TRY YOURS
 
