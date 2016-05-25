@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Bootstrap 3, from LayoutIt!
+        meta(name='description', content='Source code generated using layoutit.com')
+        meta(name='author', content='LayoutIt!')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js')
+        script(type='text/javascript', src='/javascript/home.js')
+        script(type='text/javascript', src='assets/js/bootstrap.min.js')
+        link(href='assets/css/bootstrap.css', rel='stylesheet')
+        link(href='assets/css/font-awesome.css', rel='stylesheet')
+        link(href='assets/css/bootstrap-theme.css', rel='stylesheet')
+    body
+        .container-fluid
+            .row
+                .col-md-12
+                    .jumbotron
+            .row
+                .col-md-4
+                .col-md-4
+                    .form-container
+                        .form-group
+                            label(for='username')
+                                | Username
+                            input#username.form-control(type='text')
+                        .form-group
+                            label(for='password')
+                                | Password
+                            input#password.form-control(type='text')
+                        button#login.btn.btn-default(type='submit')
+                            | Submit
+                .col-md-4

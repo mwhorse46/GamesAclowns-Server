@@ -1,4 +1,5 @@
 var FacebookStrategy = require('passport-facebook').Strategy;
+var LocalStrategy   = require('passport-local').Strategy;
 //var User = require('../models/user');
 var getConnection   =   require('../utils/mysql-connector')
 
@@ -125,5 +126,32 @@ module.exports = function(passport) {
         });
 
     }));
+
+
+    passport.use('local', new LocalStrategy({
+            usernameField : 'username',
+            passwordField : 'password',
+            passReqToCallback : true
+        },
+        function (req, username, password, done) {
+
+            getConnection(function (err, connector) {
+                if(err)
+                    return done(err);
+
+                connector.query('select * from tbl_admin where username = ? and password = ?',
+                    [username,password],
+                    function (err, userInfo) {
+
+                        if(err)
+                            return done(err);
+
+                        return done(null,userInfo[0]);
+
+                    });
+            })
+
+        }));
+
 
 };

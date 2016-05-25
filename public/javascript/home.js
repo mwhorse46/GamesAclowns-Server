@@ -42,6 +42,26 @@ $('document').ready(function () {
 
     });
 
+    $("#login").click(function () {
+
+        var username    =   $("#username").val();
+        var pass        =   $("#password").val();
+
+        if(username != "" && pass != ""){
+            $.ajax({
+               url:'/login/admin',
+               type:'POST',
+                data:{
+                    username:username,
+                    password:pass
+                },
+                success:function (data) {
+                    window.location.reload('/angryadmin')
+                }
+            });
+        }
+    });
+
 
     function ImageUpload(imageId, callback) {
         if (imageUploadTapped == true) {

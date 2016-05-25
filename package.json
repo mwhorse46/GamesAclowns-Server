@@ -23,7 +23,7 @@
     "node-dir": "^0.1.12",
     "passport": "~0.2.0",
     "passport-facebook": "~1.0.0",
-    "passport-local": "~1.0.0",
+    "passport-local": "^1.0.0",
     "password-hash": "^1.2.2",
     "static-favicon": "~1.0.0",
     "webshot": "^0.18.0"

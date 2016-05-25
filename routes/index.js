@@ -4,7 +4,8 @@ var dir = require('node-dir');
 var admin	=	require('../datalayer/admin')
 var userManager	=	require('../datalayer/user');
 var webshot = require('webshot');
-var config	=	require('../utils/config')
+var config	=	require('../utils/config');
+var getConnection	=	require('../utils/mysql-connector')
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
@@ -14,6 +15,45 @@ var isAuthenticated = function (req, res, next) {
 		return next();
 	// if the user is not authenticated then redirect him to the login page
 	res.redirect('/index');
+};
+
+var isAdminAuthenticated = function (req, res, next) {
+	// if user is authenticated in the session, call the next() to call the next request handler
+	// Passport adds this method to request object. A middleware is allowed to add properties to
+	// request and response objects
+	console.log("ISADMINAUTH")
+	console.log(req.path)
+	console.log(req.user)
+	if(req.user != undefined && req.user.username && req.user.password) {
+		console.log("CHECK")
+		getConnection(function (err, connector) {
+			if (err)
+				res.redirect('/angryadmin');
+
+			connector.query('select * from tbl_admin where username = ? and password = ?',
+				[req.user.username, req.user.password],
+				function (err, userInfo) {
+					console.log(err)
+					console.log(userInfo)
+					if (err) {
+						res.redirect('/angryadmin');
+					}
+
+					return next();
+					//return done(null, userInfo[0]);
+
+				});
+		});
+	}else{
+		if(req.path == '/angryadmin')
+			res.render('login');
+		else
+			res.redirect('/angryadmin')
+	}
+	// if (req.isAuthenticated())
+	// 	return next();
+	// // if the user is not authenticated then redirect him to the login page
+	// res.redirect('/angryadmin');
 };
 
 
@@ -123,9 +163,7 @@ module.exports = function(passport){
 	router.get('/index', function(req, res) {
 		res.render('index');
 	});
-	router.get('/uploader',function (req, res) {
-		res.render('uploader');
-	});
+
 
 	router.post('/insertimage',admin.addImage);
 
@@ -262,10 +300,7 @@ module.exports = function(passport){
 		res.render('layout');
 	});
 
-	router.get('/signout', function(req, res) {
-		req.logout();
-		res.redirect('/');
-	});
+
 
 	router.get('/dash',
 		passport.authenticate('facebook', { scope : 'email' }
@@ -278,8 +313,32 @@ module.exports = function(passport){
 		})
 	);
 
+	router.get('/angryadmin',isAdminAuthenticated,function (req, res) {
 
+		if(req.user.username && req.user.password){
+			res.redirect('/admin/uploader')
+		}else
+			res.render('login');
+	});
 
+	router.post('/login/admin',passport.authenticate('local', {
+		successRedirect : '/admin/uploader', //TODO: Change this to webpage if admin is from Web.
+		failureRedirect : '/angryadmin',   //TODO: Change this to webpage if admin is from Web.
+		failureFlash : false                //TODO: Enable flash if admin is from Web.
+	}));
+
+	router.get('/admin/uploader',isAdminAuthenticated,function (req, res) {
+		res.render('uploader');
+	});
+
+	router.get('/signout', function(req, res) {
+		req.logout();
+		res.redirect('/');
+	});
+	router.get('/admin/signout',isAdminAuthenticated, function(req, res) {
+		req.logout();
+		res.redirect('/angryadmin');
+	});
 
 
 	function reverse_id(n){
