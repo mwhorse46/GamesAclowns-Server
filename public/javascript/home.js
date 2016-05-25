@@ -98,7 +98,7 @@ $('document').ready(function () {
 
     if(url_to_scrap != "" && url_to_scrap != undefined){
         $.post(
-            'https://graph.facebook.com',
+            'https://graph.facebook.com/989506491086988',
             {
                 id: url_to_scrap,
                 scrape: true
