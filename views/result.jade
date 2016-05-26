@@ -15,6 +15,7 @@ html(lang='en')
         meta(property='og:image:height', content='315' )
         meta(itemprop='image', content=og_image)
         // <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
         link(rel='icon', type='image/png', href='images/ac_logo.png')
         link(rel='stylesheet', href='assets/css/lib.css')
         link(rel='stylesheet', href='assets/css/app.css')
@@ -35,6 +36,23 @@ html(lang='en')
             })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
             ga('create', 'UA-78351553-1', 'auto');
             ga('send', 'pageview');
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '1635446443444270',
+                    xfbml: true,
+                    version: 'v2.5'
+                });
+            };
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://connect.facebook.net/en_us/all.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         nav.Nav
             p.Nav__hamburger(href='#')
 
