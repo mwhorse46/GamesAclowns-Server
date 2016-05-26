@@ -159,7 +159,7 @@ module.exports = function(passport){
 
 
 	router.get('/',function (req, res) {
-		res.render('index_home');
+		res.render('landing');
 	});
 
 	router.get('/index', function(req, res) {

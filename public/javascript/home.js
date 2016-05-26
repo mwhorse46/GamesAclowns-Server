@@ -154,5 +154,11 @@ $('document').ready(function () {
 
         return false;
     });
+    $('#go-to-app').click(function(){
+    //$("body").on('click','#',function (e) {
+        window.location.replace('/dash');
+    });
+
+
 
 });
