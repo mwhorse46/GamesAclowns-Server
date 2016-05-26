@@ -11,8 +11,6 @@ html(lang='en')
         link(href='assets/css/bootstrap-theme.css', rel='stylesheet')
         script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
         script(type='text/javascript', src='/javascript/home.js')
-        script(src='assets/js/lib.js')
-        script(src='assets/js/app.js')
         script(src='javascript/result.js')
         link(rel='stylesheet', href='assets/css/lib.css')
         link(rel='stylesheet', href='assets/css/app.css')
@@ -38,7 +36,7 @@ html(lang='en')
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         nav.Nav
-            p.Nav__hamburger(href='#')
+            a.Nav__hamburger(href='#')
 
         main.Work
             header.Hero.Hero--work(style="background: #2B334C;")
@@ -111,3 +109,5 @@ html(lang='en')
             //  c8.8-6,15.1-15.4,16.8-26.4C84,52,73,48.5,60.3,50.5z')
 
         //script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
+        script(src='assets/js/lib.js')
+        script(src='assets/js/app.js')
