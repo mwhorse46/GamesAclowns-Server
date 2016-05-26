@@ -14,7 +14,7 @@ var isAuthenticated = function (req, res, next) {
 	if (req.isAuthenticated())
 		return next();
 	// if the user is not authenticated then redirect him to the login page
-	res.redirect('/index');
+	res.redirect('/');
 };
 
 var isAdminAuthenticated = function (req, res, next) {
@@ -242,7 +242,7 @@ module.exports = function(passport){
 											choicesInfo.charimage	=	config.runningHost+"/images/"+charimage;
 											choicesInfo.redirect	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
 											choicesInfo.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choiceInfo.pk_choiceid + ".png?z="+Math.floor(Math.random()*90000) + 10000;
-											res.render('home', choicesInfo);
+											res.render('result', choicesInfo);
 										});
 									});
 								});
@@ -314,7 +314,7 @@ module.exports = function(passport){
 	router.get('/login/facebook/callback',
 		passport.authenticate('facebook', {
 			successRedirect : '/home',
-			failureRedirect : '/index'
+			failureRedirect : '/'
 		})
 	);
 

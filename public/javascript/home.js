@@ -159,6 +159,17 @@ $('document').ready(function () {
         window.location.replace('/dash');
     });
 
+    //$("#goto").click(function () {
+        //alert("hh")
+
+        // setTimeout(function () {
+        //     $('html, body').animate({
+        //         scrollTop: $("#app-section").offset().top
+        //     }, 800);
+        // },5000)
+
+    //});
+
 
 
 });
