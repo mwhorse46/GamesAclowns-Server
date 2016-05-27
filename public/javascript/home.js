@@ -5,7 +5,7 @@ $('document').ready(function () {
         FB.init({
             appId: '1635446443444270',
             xfbml: true,
-            version: 'v2.5'
+            version: 'v2.6'
         });
     };
     (function (d, s, id) {
@@ -15,10 +15,10 @@ $('document').ready(function () {
         }
         js = d.createElement(s);
         js.id = id;
-        js.src = "https://connect.facebook.net/en_us/all.js";
+        js.src = "/javascript/fb_all.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    
+
     function postToFeed(title, desc, url, image){
         var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
         function callback(response){}
