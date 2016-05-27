@@ -1,23 +1,16 @@
 $('document').ready(function () {
 
 
-    window.fbAsyncInit = function () {
+    window.fbAsyncInit = function(){
         FB.init({
-            appId: '1635446443444270',
-            xfbml: true,
-            version: 'v2.6'
-        });
+            appId: '1070226503051446', status: true, cookie: false, xfbml: true });
     };
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "/javascript/fb_all.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    (function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if(d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.5&appId=1070226503051446";
+        ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
 
     function postToFeed(title, desc, url, image){
         var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};

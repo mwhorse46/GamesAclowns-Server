@@ -1,6 +1,6 @@
 // facebook app settings
 module.exports = {
-	'appID' : '1635446443444270',
-	'appSecret' : '6cd24de96c554a034f9c7e198cf9d7ac',
+	'appID' : '1070226503051446',
+	'appSecret' : '0c31df175c6d0db96c2f00c603bcad0b',
 	'callbackUrl' : 'http://games.angryclowns.com/login/facebook/callback'
 }

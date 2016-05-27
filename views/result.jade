@@ -1,7 +1,6 @@
-html(lang='en')
+html
     head
         meta(charset='utf-8')
-        meta(http-equiv='x-ua-compatible', content='ie=edge')
         title Angry Clowns Apps powered by Collaborative Clouds Ltd
         meta(charset='UTF-8')
         script(src='assets/js/jquery.min.js')
@@ -9,7 +8,7 @@ html(lang='en')
         link(href='assets/css/bootstrap.css', rel='stylesheet')
         link(href='assets/css/font-awesome.css', rel='stylesheet')
         link(href='assets/css/bootstrap-theme.css', rel='stylesheet')
-        script(type='text/javascript', src='/javascript/fb_all.js')
+        script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
         script(type='text/javascript', src='/javascript/home.js')
         script(src='javascript/result.js')
         link(rel='stylesheet', href='assets/css/lib.css')
@@ -20,7 +19,7 @@ html(lang='en')
         script.
             window.fbAsyncInit = function () {
                 FB.init({
-                    appId: '1635446443444270',
+                    appId: '1070226503051446',
                     xfbml: true,
                     version: 'v2.6'
                 });
@@ -32,7 +31,7 @@ html(lang='en')
                 }
                 js = d.createElement(s);
                 js.id = id;
-                js.src = "/javascript/fb_all.js";
+                js.src = "https://connect.facebook.net/en_us/all.js";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         nav.Nav
