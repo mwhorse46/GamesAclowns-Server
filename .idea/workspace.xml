@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="762eaf90-52e0-41d2-ab23-af1d594a4ca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascript/home.js" afterPath="$PROJECT_DIR$/public/javascript/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home.jade" afterPath="$PROJECT_DIR$/views/home.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="passport-social-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,26 +27,26 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1696">
-              <caret line="245" column="60" selection-start-line="245" selection-start-column="60" selection-end-line="245" selection-end-column="60" />
+            <state relative-caret-position="194">
+              <caret line="245" column="62" selection-start-line="245" selection-start-column="62" selection-end-line="245" selection-end-column="62" />
               <folding>
-                <marker date="1464334518000" expanded="true" signature="5821:5844" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="5821:5873" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="6489:6551" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="6489:6557" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="6489:6599" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="6630:6706" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="6742:6782" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="6859:6900" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7192:7213" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7228:7244" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7228:7339" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7354:7399" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7435:7519" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7540:7585" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7660:7744" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="7765:7816" placeholder="..." />
-                <marker date="1464334518000" expanded="true" signature="9719:10571" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="5821:5844" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="5821:5873" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="6489:6551" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="6489:6557" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="6489:6599" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="6630:6706" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="6742:6782" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="6859:6900" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7192:7213" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7228:7244" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7228:7339" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7354:7399" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7435:7519" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7540:7585" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7660:7744" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="7765:7816" placeholder="..." />
+                <marker date="1464345911000" expanded="true" signature="9721:10573" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -83,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/result.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-795">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="302">
+              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascript/home.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -184,12 +183,12 @@
         <option value="$PROJECT_DIR$/public/javascript/result.js" />
         <option value="$PROJECT_DIR$/views/landing.jade" />
         <option value="$PROJECT_DIR$/public/javascript/fb_all.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/fb.js" />
         <option value="$PROJECT_DIR$/views/result.jade" />
         <option value="$PROJECT_DIR$/views/home.jade" />
         <option value="$PROJECT_DIR$/public/javascript/home.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -486,12 +485,12 @@
       <workItem from="1464249264657" duration="6322000" />
       <workItem from="1464275580737" duration="12524000" />
       <workItem from="1464324566145" duration="3426000" />
-      <workItem from="1464344719460" duration="1053000" />
+      <workItem from="1464344719460" duration="1149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93082000" />
+    <option name="totallyTimeSpent" value="93178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
@@ -814,32 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1696">
-          <caret line="245" column="60" selection-start-line="245" selection-start-column="60" selection-end-line="245" selection-end-column="60" />
-          <folding>
-            <marker date="1464334518000" expanded="true" signature="5821:5844" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="5821:5873" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="6489:6551" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="6489:6557" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="6489:6599" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="6630:6706" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="6742:6782" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="6859:6900" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7192:7213" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7228:7244" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7228:7339" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7354:7399" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7435:7519" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7540:7585" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7660:7744" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="7765:7816" placeholder="..." />
-            <marker date="1464334518000" expanded="true" signature="9719:10571" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -880,14 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/result.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-795">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/home.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -900,6 +865,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="245" column="62" selection-start-line="245" selection-start-column="62" selection-end-line="245" selection-end-column="62" />
+          <folding>
+            <marker date="1464345911000" expanded="true" signature="5821:5844" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="5821:5873" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="6489:6551" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="6489:6557" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="6489:6599" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="6630:6706" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="6742:6782" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="6859:6900" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7192:7213" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7228:7244" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7228:7339" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7354:7399" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7435:7519" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7540:7585" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7660:7744" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="7765:7816" placeholder="..." />
+            <marker date="1464345911000" expanded="true" signature="9721:10573" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/result.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
         </state>
       </provider>
