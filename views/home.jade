@@ -2,10 +2,10 @@ html(lang='en')
    head
      meta(charset='UTF-8')
      script(src='assets/js/jquery.min.js')
-     script(type='text/javascript', src='assets/js/bootstrap.min.js')
-     link(href='assets/css/bootstrap.css', rel='stylesheet')
-     link(href='assets/css/font-awesome.css', rel='stylesheet')
-     link(href='assets/css/bootstrap-theme.css', rel='stylesheet')
+     //script(type='text/javascript', src='assets/js/bootstrap.min.js')
+     //link(href='assets/css/bootstrap.css', rel='stylesheet')
+     //link(href='assets/css/font-awesome.css', rel='stylesheet')
+     //link(href='assets/css/bootstrap-theme.css', rel='stylesheet')
      script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
      script(type='text/javascript', src='/javascript/home.js')
    body
@@ -19,7 +19,7 @@ html(lang='en')
          };
          (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {console.log("GET_ELEM:"+d.getElementsById(id));return;}
+         if (d.getElementById(id)) {return;}
          js = d.createElement(s); js.id = id;
          js.src = "https://connect.facebook.net/en_us/all.js";
          fjs.parentNode.insertBefore(js, fjs);
