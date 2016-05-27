@@ -9,7 +9,7 @@ $('document').ready(function () {
         if(d.getElementById(id)) {return;}
         js = d.createElement('script'); js.id = id;
         js.async = true;
-        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.5&appId=1070226503051446";
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.6&appId=1070226503051446";
         ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
 
     function postToFeed(title, desc, url, image){
