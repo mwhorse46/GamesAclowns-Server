@@ -243,7 +243,7 @@ module.exports = function(passport){
 											choicesInfo.redirect	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
 											choicesInfo.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choiceInfo.pk_choiceid + ".png?z="+Math.floor(Math.random()*90000) + 10000;
 											console.log(choicesInfo);
-											res.render('result', choicesInfo);
+											res.render('home', choicesInfo);
 										});
 									});
 								});
