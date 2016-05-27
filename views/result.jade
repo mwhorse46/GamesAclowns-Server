@@ -6,9 +6,13 @@ html
         script(src='assets/js/jquery.min.js')
         script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
         script(type='text/javascript', src='/javascript/home.js')
+        script(src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
+            // stats.js lib
+        script(src='http://threejs.org/examples/js/libs/stats.min.js')
         //link(rel='stylesheet', href='assets/css/lib.css')
         //link(rel='stylesheet', href='assets/css/app.css')
         link(rel='stylesheet', href='assets/css/materialize.css')
+        link(rel='stylesheet', href='stylesheet/particle.css')
 
     body(oncontextmenu="return true")
         script.
@@ -27,6 +31,9 @@ html
                 js.src = "https://connect.facebook.net/en_us/all.js#xfbml=1&version=v2.6&appId=1070226503051446";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
+        #particles-js
+        .count-particles
+            span.js-count-particles
         nav.Nav
             a.Nav__hamburger(href='#')
 

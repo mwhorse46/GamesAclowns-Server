@@ -3,6 +3,9 @@ html(lang='en')
      meta(charset='UTF-8')
      script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
      script(type='text/javascript', src='/javascript/home.js')
+     script(type='text/javascript', src='/javascript/particle.js')
+     //link(rel='stylesheet', href='assets/css/materialize.css')
+     link(rel='stylesheet', href='/stylesheets/particle.css')
    body
      script.
          window.fbAsyncInit = function() {
@@ -22,6 +25,9 @@ html(lang='en')
      //// Your share button code
      //#fb-share-co
      //  .fb-share-button(data-href='http://ec2-52-89-20-189.us-west-2.compute.amazonaws.com/layout', data-layout='link')
+     #particles-js
+     .count-particles
+        span.js-count-particles
      h1 Welcome #{name}
      .storage#storage(url=redirect)
      .storage_image#storage_image(url=og_image)

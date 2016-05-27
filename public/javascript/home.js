@@ -60,7 +60,7 @@ $('document').ready(function () {
                         console.log(success)
                         if(success != false) {
                             alert("Success");
-                            window.location.replace('/uploader');
+                            window.location.replace('/admin/uploader');
                         }
                         else
                             alert("Failed")
