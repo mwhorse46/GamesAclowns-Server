@@ -147,8 +147,11 @@ $('document').ready(function () {
         scrapeLink(img_url_scrap)
     }
 
+    //$('body').on('click','.btnShare',function (e) {
+
 
     $('.btnShare').click(function(){
+        alert("SHARE")
         elem = $(this);
         postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
 

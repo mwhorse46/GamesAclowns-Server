@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+.section:hover {
+animation: sectionBox 0.25s linear 0s infinite alternate;
+-webkit-animation: sectionBox 0.25s linear 0s infinite alternate;
+}
+@keyframes sectionBox {
+100% {
+opacity: 0.75;
+}
+}
+@-webkit-keyframes sectionBox {
+100% {
+opacity: 0.75;
+}
+}
+.section.section-expand .section-title i {
+animation: sectionBoxIcon 1s ease-in-out 1s;
+-webkit-animation: sectionBoxIcon 1s ease-in-out 1s;
+}
+@keyframes sectionBoxIcon {
+100% {
+transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+}
+}
+@-webkit-keyframes sectionBoxIcon {
+100% {
+transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+}
+}
+.section.section-expand .container {
+animation: thumbnailsIn 1s ease-in-out 0s;
+-webkit-animation: thumbnailsIn 1s ease-in-out 0s;
+}
+@keyframes thumbnailsIn {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+@-webkit-keyframes thumbnailsIn {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}

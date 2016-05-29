@@ -163,7 +163,7 @@ module.exports = function(passport){
 	});
 
 	router.get('/index', function(req, res) {
-		res.render('index');
+		res.render('result_test');
 	});
 
 
@@ -243,7 +243,7 @@ module.exports = function(passport){
 											choicesInfo.redirect	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
 											choicesInfo.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choiceInfo.pk_choiceid + ".png?z="+Math.floor(Math.random()*90000) + 10000;
 											console.log(choicesInfo);
-											res.render('home', choicesInfo);
+											res.render('result_test', choicesInfo);
 										});
 									});
 								});
