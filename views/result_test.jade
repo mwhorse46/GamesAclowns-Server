@@ -49,14 +49,13 @@ html(lang='en')
                             br
                         a.btnShare(href=redirect, data-image=og_image, data-title='Your Current Situation', data-desc='Find which character resembles your current situation')
                             img(src="images/share.png",width="150px")
-                        a(href="/dash") RETRY
+                        a(href="/dash")
+                            img(src="images/tryagain.png",width="150px")
                     .hero-unit.text-center
-                        h2
-                            | efficiency and
-                            span reliability
-                        p.lead
-                            | This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                        a.btn.btn-large Get a Quote
+                        script(async='', src='http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+                            ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-6400861553252981', data-ad-slot='2071435353', data-ad-format='auto')
+                        script.
+                            (adsbygoogle = window.adsbygoogle || []).push({});
         script(type='text/javascript', src='javascript/home.js')
         //script(type='text/javascript', src='javascript/jquery-1.10.0.min.js')
         //script(type='text/javascript', src='javascript/bootstrap.min.js')
