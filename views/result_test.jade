@@ -3,35 +3,30 @@ html(lang='en')
         meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
         title നിങ്ങളുടെ ഇപ്പോഴത്തെ അവസ്ഥ |  Angry Clowns Entertainment
-        link(rel='stylesheet', type='text/css', href='stylesheets/bootstrap.min.css')
-        link(rel='stylesheet', type='text/css', href='stylesheets/bootstrap-responsive.min.css')
-        link(rel='stylesheet', type='text/css', href='stylesheets/font-awesome.min.css')
-        link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
-        //link(rel='stylesheet', type='text/css', href='stylesheets/animations.css')
         //script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
         script(type='text/javascript', src='javascript/jquery.min.js')
         script(type='text/javascript', src='javascript/fb_all.js')
-        script(type='text/javascript', src='javascript/home.js')
-        //link(rel='shortcut icon', href='img/favicon.ico')
+        link(rel='stylesheet', type='text/css', href='stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css', href='stylesheets/bootstrap-responsive.min.css')
+        link(rel='stylesheet', type='text/css', href='stylesheets/style_new.css')
+        //link(rel='stylesheet', type='text/css', href='stylesheets/font-awesome.min.css')
+        //link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
     body
+        #fb-root
         script.
             window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '1070226503051446',
-                    xfbml: true,
-                    version: 'v2.6'
-                });
+            FB.init({
+            appId: '1070226503051446',
+            version    : 'v2.6',
+            xfbml: true
+            });
             };
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {
-                    return;
-                }
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/en_us/all.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+            (function () {
+            var e = document.createElement('script');
+            e.async = true;
+            e.src = 'javascript/fb_all.js';
+            document.getElementById('fb-root').appendChild(e);
+            }());
         .storage#storage(url=redirect)
         .storage_image#storage_image(url=og_image)
         #blog(style='background: #00BCD4;')
@@ -62,6 +57,7 @@ html(lang='en')
                         p.lead
                             | This is a simple hero unit, a simple jumbotron-style component for calling extra attention
                         a.btn.btn-large Get a Quote
+        script(type='text/javascript', src='javascript/home.js')
         //script(type='text/javascript', src='javascript/jquery-1.10.0.min.js')
         //script(type='text/javascript', src='javascript/bootstrap.min.js')
 

@@ -151,7 +151,7 @@ $('document').ready(function () {
 
 
     $('.btnShare').click(function(){
-        alert("SHARE")
+        //alert("SHARE")
         elem = $(this);
         postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
 
