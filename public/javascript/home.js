@@ -11,7 +11,16 @@ $('document').ready(function () {
     //     js.async = true;
     //     js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.6&appId=1070226503051446";
     //     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
-    
+
+    try {
+        FB.init({
+            appId: '1059351237466429',
+            version: 'v2.6',
+            xfbml: true
+        });
+    }catch(err){
+        console.log("FB INIT ERROR")
+    }
     function postToFeed(title, desc, url, image){
 
         FB.init({
