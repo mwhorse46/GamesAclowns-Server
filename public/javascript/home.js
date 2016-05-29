@@ -13,8 +13,11 @@ $('document').ready(function () {
     //     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
 
     function postToFeed(title, desc, url, image){
+
         var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
-        function callback(response){}
+        function callback(response){
+            console.log(response)
+        }
         FB.ui(obj, callback);
     }
     function scrapeLink(url){
