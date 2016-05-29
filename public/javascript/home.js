@@ -145,26 +145,26 @@ $('document').ready(function () {
         }
     }
 
-    var url_to_scrap    =   $("#storage").attr('url');
-    var img_url_scrap   =   $("#storage_image").attr('url');
-    console.log(url_to_scrap);
-    console.log(img_url_scrap);
-
-    if(url_to_scrap != "" && url_to_scrap != undefined){
-        // $.post(
-        //     'https://graph.facebook.com/989506491086988',
-        //     {
-        //         id: url_to_scrap,
-        //         scrape: true
-        //     },
-        //     function(response){
-        //         console.log("SCRAP")
-        //         console.log(response);
-        //     }
-        // );
-        scrapeLink(url_to_scrap);
-        scrapeLink(img_url_scrap)
-    }
+    // var url_to_scrap    =   $("#storage").attr('url');
+    // var img_url_scrap   =   $("#storage_image").attr('url');
+    // console.log(url_to_scrap);
+    // console.log(img_url_scrap);
+    //
+    // if(url_to_scrap != "" && url_to_scrap != undefined){
+    //     // $.post(
+    //     //     'https://graph.facebook.com/989506491086988',
+    //     //     {
+    //     //         id: url_to_scrap,
+    //     //         scrape: true
+    //     //     },
+    //     //     function(response){
+    //     //         console.log("SCRAP")
+    //     //         console.log(response);
+    //     //     }
+    //     // );
+    //     scrapeLink(url_to_scrap);
+    //     scrapeLink(img_url_scrap)
+    // }
 
     //$('body').on('click','.btnShare',function (e) {
 
