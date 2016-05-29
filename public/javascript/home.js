@@ -11,16 +11,14 @@ $('document').ready(function () {
     //     js.async = true;
     //     js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.6&appId=1070226503051446";
     //     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
-    window.fbAsyncInit = function () {
-        console.log("FB Reinit")
+    
+    function postToFeed(title, desc, url, image){
+
         FB.init({
             appId: '1059351237466429',
             version    : 'v2.6',
             xfbml: true
         });
-    };
-    function postToFeed(title, desc, url, image){
-
         var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
         function callback(response){
             console.log(response)
