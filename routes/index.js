@@ -289,7 +289,7 @@ module.exports = function(passport){
 					choice.redirect	=	config.runningHost + '/choosed/reaction/' + choice.userid + '/' + choice.pk_choiceid;
 					console.log("GENEREATE")
 					console.log(choice)
-					res.render('test',choice);
+					res.render('result_other',choice);
 
 				}else{
 					//TODO:Handle default

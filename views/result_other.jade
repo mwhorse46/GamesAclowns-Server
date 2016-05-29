@@ -4,29 +4,16 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
         title നിങ്ങളുടെ ഇപ്പോഴത്തെ അവസ്ഥ |  Angry Clowns Entertainment
         script(type='text/javascript', src='https://connect.facebook.net/en_us/all.js')
-        script(type='text/javascript', src='../javascript/jquery.min.js')
+        script(type='text/javascript', src='/javascript/jquery.min.js')
+        script(type='text/javascript', src='/javascript/home.js')
+        script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
         //script(type='text/javascript', src='javascript/fb_all.js')
-        link(rel='stylesheet', type='text/css', href='stylesheets/bootstrap.min.css')
-        link(rel='stylesheet', type='text/css', href='stylesheets/bootstrap-responsive.min.css')
-        link(rel='stylesheet', type='text/css', href='stylesheets/style_new.css')
+        link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap-responsive.min.css')
+        link(rel='stylesheet', type='text/css', href='/stylesheets/style_new.css')
         //link(rel='stylesheet', type='text/css', href='stylesheets/font-awesome.min.css')
         //link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
     body
-        #fb-root
-        script.
-            window.fbAsyncInit = function () {
-            FB.init({
-            appId: '1070226503051446',
-            version    : 'v2.6',
-            xfbml: true
-            });
-            };
-            (function () {
-            var e = document.createElement('script');
-            e.async = true;
-            e.src = '//connect.facebook.net/en_us/all.js';
-            document.getElementById('fb-root').appendChild(e);
-            }());
         .storage#storage(url=redirect)
         .storage_image#storage_image(url=og_image)
         #blog(style='background: #00BCD4;')
@@ -47,16 +34,13 @@ html(lang='en')
                         img(src=og_image, alt='Logo')
                         p
                             br
-                        a.btnShare(href=redirect, data-image=og_image, data-title='Your Current Situation', data-desc='Find which character resembles your current situation')
-                            img(src="images/share.png",width="150px")
                         a(href="/dash")
-                            img(src="images/tryagain.png",width="150px")
+                            img(src="/images/try_yours.png",width="150px")
                     .hero-unit.text-center
-                        //script(async='', src='http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
-                        //    ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-6400861553252981', data-ad-slot='2071435353', data-ad-format='auto')
-                        //script.
-                        //    (adsbygoogle = window.adsbygoogle || []).push({});
-        script(type='text/javascript', src='javascript/home.js')
+                        ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-6400861553252981', data-ad-slot='2071435353', data-ad-format='auto')
+                        script.
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+
         //script(type='text/javascript', src='javascript/jquery-1.10.0.min.js')
         //script(type='text/javascript', src='javascript/bootstrap.min.js')
 
