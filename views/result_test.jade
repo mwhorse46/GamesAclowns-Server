@@ -17,6 +17,7 @@ html(lang='en')
             window.fbAsyncInit = function () {
             FB.init({
             appId: '1070226503051446',
+            status     : true,
             version    : 'v2.6',
             xfbml: true
             });
@@ -51,6 +52,9 @@ html(lang='en')
                             img(src="images/share.png",width="150px")
                         a(href="/dash")
                             img(src="images/tryagain.png",width="150px")
+                        br
+                        br
+                        .fb-like(data-href='https://www.facebook.com/AngryClownsEntertainment/', data-layout='standard', data-action='like', data-show-faces='true', data-share='true')
                     .hero-unit.text-center
                         //script(async='', src='http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
                         //    ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-6400861553252981', data-ad-slot='2071435353', data-ad-format='auto')
