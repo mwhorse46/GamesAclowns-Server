@@ -1,6 +1,7 @@
 $('document').ready(function () {
 
 
+    $("#progress").hide();
     // window.fbAsyncInit = function(){
     //     FB.init({
     //         appId: '1070226503051446', status: true, xfbml: true });
@@ -59,6 +60,7 @@ $('document').ready(function () {
         imageUploadTapped   =   true;
     });
     $("#upload").click(function () {
+        $("#progress").show();
         ImageUpload("fileInput",function (err, data) {
             //alert(data)
             if(!err) {
@@ -77,6 +79,7 @@ $('document').ready(function () {
                     data    :   data,
                     success :   function (success) {
                         console.log(success)
+                        $("#progress").hide();
                         if(success != false) {
                             alert("Success");
                             window.location.replace('/admin/uploader');
@@ -88,6 +91,7 @@ $('document').ready(function () {
 
             }else{
                 alert("Failed to upload");
+                $("#progress").hide();
             }
         });
 
