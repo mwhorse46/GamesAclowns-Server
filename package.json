@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "async": "^1.5.2",
     "bcrypt-nodejs": "*",
     "body-parser": "~1.0.0",
     "connect-flash": "*",

@@ -1,7 +1,11 @@
 var FacebookStrategy = require('passport-facebook').Strategy;
 var LocalStrategy   = require('passport-local').Strategy;
 //var User = require('../models/user');
-var getConnection   =   require('../utils/mysql-connector')
+//var getConnection   =   require('../utils/mysql-connector');
+
+
+var sqlExecuteQueryHelper = require('../utils/mysqlConnection');
+var sqlExecuteQueryHelper = new sqlExecuteQueryHelper();
 
 var host    =   process.env.RUNNING_HOST;
 if(host == 1)
@@ -27,9 +31,9 @@ module.exports = function(passport) {
 		process.nextTick(function() {
 
 
-            getConnection(function (err, Connector) {
-                if(!err){
-                    Connector.query("select * from tbl_user where userid = ?",[profile.id],function (err, userInfo) {
+            //getConnection(function (err, Connector) {
+                //if(!err){
+            sqlExecuteQueryHelper.executeQuery("select * from tbl_user where userid = ?",[profile.id],function (err, userInfo) {
                         console.log(err);
                         console.log(userInfo);
 
@@ -68,11 +72,11 @@ module.exports = function(passport) {
                                 image   :   photos_,
                                 token   :   access_token
                             };
-                            Connector.query("update tbl_user set ? where userid = ?",[userInfo,user.userid],function (err, userstatus) {
+                            sqlExecuteQueryHelper.executeQuery("update tbl_user set ? where userid = ?",[userInfo,user.userid],function (err, userstatus) {
                                 if(err){
                                     throw err;
                                 }else{
-                                    Connector.query('select * from tbl_user where userid = ?',[user.userid],function (err, userData) {
+                                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user where userid = ?',[user.userid],function (err, userData) {
                                         return done(null,userData[0]);
                                     })
                                 }
@@ -109,19 +113,19 @@ module.exports = function(passport) {
                                 image   :   photos_,
                                 token   :   access_token
                             };
-                            Connector.query("insert into tbl_user set ?",user,function (err, userstatus) {
+                            sqlExecuteQueryHelper.executeQuery("insert into tbl_user set ?",user,function (err, userstatus) {
                                 if(err){
                                     throw err;
                                 }else{
-                                    Connector.query('select * from tbl_user where userid = ?',[profile.id],function (err, userData) {
+                                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user where userid = ?',[profile.id],function (err, userData) {
                                         return done(null,userData[0]);
                                     })
                                 }
                             });
                         }
                     })
-                }
-            });
+                //}
+            //});
 
         });
 
@@ -135,11 +139,11 @@ module.exports = function(passport) {
         },
         function (req, username, password, done) {
 
-            getConnection(function (err, connector) {
-                if(err)
-                    return done(err);
+            //getConnection(function (err, connector) {
+            //     if(err)
+            //         return done(err);
 
-                connector.query('select * from tbl_admin where username = ? and password = ?',
+            sqlExecuteQueryHelper.executeQuery('select * from tbl_admin where username = ? and password = ?',
                     [username,password],
                     function (err, userInfo) {
 
@@ -149,7 +153,7 @@ module.exports = function(passport) {
                         return done(null,userInfo[0]);
 
                     });
-            })
+            //})
 
         }));
 

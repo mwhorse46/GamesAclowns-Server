@@ -4,7 +4,9 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mysql   =   require('./utils/mysql-connector');
+//var mysql   =   require('./utils/mysql-connector');
+var mySqlConnection   =   require('./utils/mysqlConnection');
+var mySqlConnectionObj = new mySqlConnection();
 
 
 var fs = require('fs');
@@ -56,13 +58,15 @@ var routes = require('./routes/index')(passport);
 app.use('/', routes);
 
 
-mysql(function (err, Connection) {
-    err ? console.log(err) : console.log("Connected to AngryClowns DB");
-    // Connection.query("select * from tbl_user",function (err, status) {
-    //     console.log(err)
-    //     console.log(status)
-    // })
-});
+// mysql(function (err, Connection) {
+//     err ? console.log(err) : console.log("Connected to AngryClowns DB");
+//     // Connection.query("select * from tbl_user",function (err, status) {
+//     //     console.log(err)
+//     //     console.log(status)
+//     // })
+// });
+
+mySqlConnectionObj.init();
 
 
 // catch 404 and forward to error handler

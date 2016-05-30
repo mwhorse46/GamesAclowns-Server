@@ -5,7 +5,11 @@ var admin	=	require('../datalayer/admin')
 var userManager	=	require('../datalayer/user');
 var webshot = require('webshot');
 var config	=	require('../utils/config');
-var getConnection	=	require('../utils/mysql-connector')
+//var getConnection	=	require('../utils/mysql-connector');
+
+
+var sqlExecuteQueryHelper = require('../utils/mysqlConnection');
+var sqlExecuteQueryHelper = new sqlExecuteQueryHelper();
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
@@ -26,11 +30,11 @@ var isAdminAuthenticated = function (req, res, next) {
 	console.log(req.user)
 	if(req.user != undefined && req.user.username && req.user.password) {
 		console.log("CHECK")
-		getConnection(function (err, connector) {
-			if (err)
-				res.redirect('/angryadmin');
+		// getConnection(function (err, connector) {
+		// 	if (err)
+		// 		res.redirect('/angryadmin');
 
-			connector.query('select * from tbl_admin where username = ? and password = ?',
+		sqlExecuteQueryHelper.executeQuery('select * from tbl_admin where username = ? and password = ?',
 				[req.user.username, req.user.password],
 				function (err, userInfo) {
 					console.log(err)
@@ -43,7 +47,7 @@ var isAdminAuthenticated = function (req, res, next) {
 					//return done(null, userInfo[0]);
 
 				});
-		});
+		//});
 	}else{
 		if(req.path == '/angryadmin')
 			res.render('login');

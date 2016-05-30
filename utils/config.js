@@ -9,14 +9,16 @@ exports.mysqlConfig     =   {
     port        :   '3306',
     user        :   'root',
     password    :   'root',
-    database    :   "angryclowns"
+    database    :   "angryclowns",
+    multipleStatements: true,
 };
 
 exports.mysqlDevConfig     =   {
     host        :   'localhost',
     user        :   'root',
     password    :   'qaswlopk',
-    database    :   "angryclowns"
+    database    :   "angryclowns",
+    multipleStatements: true,
 };
 
 exports.items_per_page  =   10;

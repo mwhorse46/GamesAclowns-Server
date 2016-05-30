@@ -3,11 +3,14 @@
  */
 'use-strict'
 
-var getConnection   =   require('../utils/mysql-connector');
+//var getConnection   =   require('../utils/mysql-connector');
+var sqlExecuteQueryHelper = require('../utils/mysqlConnection');
+var sqlExecuteQueryHelper = new sqlExecuteQueryHelper();
+
 exports.fetchImage    =   function (gender,callback) {
 
-    getConnection(function (err, Connector) {
-        Connector.query('select * from tbl_images where gender = ? ORDER BY RAND() LIMIT 0,1',gender,function (err, image) {
+    //getConnection(function (err, Connector) {
+    sqlExecuteQueryHelper.executeQuery('select * from tbl_images where gender = ? ORDER BY RAND() LIMIT 0,1',gender,function (err, image) {
             if(!err && image != null && image.length > 0){
                 callback(image[0])
             }else {
@@ -15,40 +18,40 @@ exports.fetchImage    =   function (gender,callback) {
             }
 
         })
-    })
+    //})
 };
 
 exports.addChoice   =   function (userInfo, callback) {
 
-    getConnection(function (err, Connector) {
-        Connector.query('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
+    //getConnection(function (err, Connector) {
+    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
             if(!err && choices != null && choices.length > 0){
                 var choiceid    =   choices[0].pk_choiceid;
-                Connector.query('update tbl_user_choices set ? where pk_choiceid = ?',[userInfo,choiceid],function (err, choiceupdate) {
+                sqlExecuteQueryHelper.executeQuery('update tbl_user_choices set ? where pk_choiceid = ?',[userInfo,choiceid],function (err, choiceupdate) {
 
-                    Connector.query('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
+                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
                         callback(err,choices[0]);
                     });
 
                 })
             }else{
-                Connector.query('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
-                    Connector.query('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
+                sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
+                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
                         callback(err,choices[0]);
                     });
                 })
             }
         })
-    })
+    //})
 };
 
 exports.getchoice   =   function (userinfo, callback) {
-    getConnection(function (err,Connector) {
+    //getConnection(function (err,Connector) {
 
         var choice  =   userinfo.choiceid;
         var userid  =   userinfo.userid;
 
-        Connector.query('SELECT *,tbl_user.image as userimage,tbl_images.image as charimage FROM tbl_user_choices LEFT JOIN tbl_images on tbl_images.pk_imgid=tbl_user_choices.imageid LEFT JOIN tbl_user on tbl_user_choices.userid=tbl_user.userid where tbl_user_choices.userid = ? and tbl_user_choices.pk_choiceid = ?',
+    sqlExecuteQueryHelper.executeQuery('SELECT *,tbl_user.image as userimage,tbl_images.image as charimage FROM tbl_user_choices LEFT JOIN tbl_images on tbl_images.pk_imgid=tbl_user_choices.imageid LEFT JOIN tbl_user on tbl_user_choices.userid=tbl_user.userid where tbl_user_choices.userid = ? and tbl_user_choices.pk_choiceid = ?',
         [userid,choice],function (err, choice) {
 
                 if(!err && choice != null && choice.length > 0)
@@ -56,5 +59,5 @@ exports.getchoice   =   function (userinfo, callback) {
                 else
                     callback(true,false);
         })
-    })
+    //})
 }
