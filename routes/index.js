@@ -167,7 +167,12 @@ module.exports = function(passport){
 	});
 
 
-	router.post('/insertimage',admin.addImage);
+	router.post('/insertimage',isAdminAuthenticated,admin.addImage);
+
+	router.get('/fetchimage',isAdminAuthenticated,admin.fetchgallery);
+
+
+
 
 	router.get('/home', isAuthenticated, function(req, res){
 
@@ -337,6 +342,16 @@ module.exports = function(passport){
 		res.render('uploader');
 	});
 
+	router.get('/admin/uploader',isAdminAuthenticated,function (req, res) {
+		res.render('uploader');
+	});
+
+	router.get('/admin/gallery',isAdminAuthenticated,function (req, res) {
+
+		res.render('gallery');
+	});
+
+
 	router.get('/signout', function(req, res) {
 		req.logout();
 		res.redirect('/');
@@ -347,7 +362,7 @@ module.exports = function(passport){
 	});
 
 	router.get('/tests',function (req, res) {
-		res.render('test2');
+		res.render('gallery');
 	});
 
 

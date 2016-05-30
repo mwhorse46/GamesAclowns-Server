@@ -35,3 +35,23 @@ console.log(req.body)
     }
 
 };
+
+exports.fetchgallery    =   function (req, res) {
+    console.log("FETCGING")
+    getConnection(function (err, Connector) {
+        if(!err){
+            Connector.query('SELECT images.*,tbl_admin.username FROM tbl_images as images LEFT JOIN tbl_admin ON images.fk_admin=tbl_admin.adminid',function (err, status) {
+                if(!err){
+console.log(status)
+                    res.send('gallery',status);
+                }else{
+                    res.redirect("/angryadmin")
+                }
+            })
+
+        }else{
+            res.redirect("/angryadmin")
+        }
+    })
+
+}
