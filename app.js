@@ -12,12 +12,7 @@ var mySqlConnectionObj = new mySqlConnection();
 var fs = require('fs');
 var passwordHash                    =   require('password-hash');
 var multer = require('multer');
-var imageHandler = require('gm').subClass({imageMagick: true});
-var done = false;
-var onLimit = false;
-var hashedImageName = "imageName";
 
-var dbConfig = require('./db');
 //var mongoose = require('mongoose');
 // Connect to DB
 //mongoose.connect(dbConfig.url);
@@ -67,6 +62,12 @@ app.use('/', routes);
 // });
 
 mySqlConnectionObj.init();
+setInterval(function () {
+    mySqlConnectionObj.executeQuery('SELECT 1',[],function (err, status) {
+        //console.log("MySQL Heartbeat ")
+        console.log(status)
+    });
+}, 60000);
 
 
 // catch 404 and forward to error handler

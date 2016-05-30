@@ -74,7 +74,7 @@ function getConnection(callback) {
 
 Connection.prototype.executeQuery = function (query,parameters,callback) {
     getConnection(function (err, connection) {
-        console.log(query)
+        //console.log(query)
         connection.query(query,parameters,function (err, rows) {
             connection.release();
             if (err) {
