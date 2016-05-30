@@ -13,7 +13,7 @@ $('document').ready(function () {
     //     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
     var url      = window.location.href;
     //try {
-    if(url.indexOf("choosed/reaction/") == -1) {
+    if(url.indexOf("choosed/reaction/") == -1 && url.indexOf("angryadmin") == -1 && url.indexOf("uploader") == -1) {
         FB.init({
             appId: '1059351237466429',
             version: 'v2.6',
