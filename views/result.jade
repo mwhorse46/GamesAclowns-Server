@@ -50,7 +50,9 @@ html
                         .storage_image#storage_image(url=og_image)
                         img(src=og_image, alt='')
                         br
-                        a.btnShare(href=redirect, data-image=og_image, data-title='Your Current Situation', data-desc='Find which character resembles your current situation')
+                        //a.btnShare(href=redirect, data-image=og_image, data-title='Your Current Situation', data-desc='Find which character resembles your current situation')
+                            img(src="images/share.png",width="150px")
+                        a.btnShare(href=redirect, data-image="http://games.angryclowns.com/images/giphy.gif", data-title='Your Current Situation', data-desc='Find which character resembles your current situation')
                             img(src="images/share.png",width="150px")
 
 

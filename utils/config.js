@@ -5,6 +5,7 @@
 exports.runningHost     =   process.env.RUNNING_HOST==0 ? "http://localhost:8000":"http://games.angryclowns.com";
 
 exports.mysqlConfig     =   {
+    connectionLimit : 50,
     host        :   '127.0.0.1',
     port        :   '3306',
     user        :   'root',
@@ -14,6 +15,7 @@ exports.mysqlConfig     =   {
 };
 
 exports.mysqlDevConfig     =   {
+    connectionLimit : 50,
     host        :   'localhost',
     user        :   'root',
     password    :   'qaswlopk',
