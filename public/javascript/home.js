@@ -1,19 +1,43 @@
+var logger = function()
+{
+    var oldConsoleLog = null;
+    var pub = {};
+
+    pub.enableLogger =  function enableLogger()
+    {
+        if(oldConsoleLog == null)
+            return;
+
+        window['console']['log'] = oldConsoleLog;
+    };
+
+    pub.disableLogger = function disableLogger()
+    {
+        oldConsoleLog = console.log;
+        window['console']['log'] = function() {};
+    };
+
+    return pub;
+}();
+
 $('document').ready(function () {
+
+    console.log("Please stop.");
+    console.log("This is a browser feature intended for developers.");
+    console.log("Please contact CollaborativeClouds Ltd for further information");
+    logger.disableLogger();
+
+    document.onmousedown=disableclick;
+    function disableclick(event)
+    {
+        if(event.button==2){
+            return false;
+        }
+    }
 
 
     $("#progress").hide();
-    // window.fbAsyncInit = function(){
-    //     FB.init({
-    //         appId: '1070226503051446', status: true, xfbml: true });
-    // };
-    // (function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-    //     if(d.getElementById(id)) {return;}
-    //     js = d.createElement('script'); js.id = id;
-    //     js.async = true;
-    //     js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&version=v2.6&appId=1070226503051446";
-    //     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
     var url      = window.location.href;
-    //try {
     if(url.indexOf("choosed/reaction/") == -1 && url.indexOf("angryadmin") == -1 && url.indexOf("uploader") == -1) {
         FB.init({
             appId: '1059351237466429',
@@ -21,9 +45,6 @@ $('document').ready(function () {
             xfbml: true
         });
     }
-    // }catch(err){
-    //     console.log("FB INIT ERROR")
-    // }
     function postToFeed(title, desc, url, image){
 
         FB.init({
@@ -31,27 +52,12 @@ $('document').ready(function () {
             version    : 'v2.6',
             xfbml: true
         });
-        
+
         var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
         function callback(response){
             console.log(response)
         }
         FB.ui(obj, callback);
-    }
-    function scrapeLink(url){
-        var masterdfd = $.Deferred();
-        FB.api('https://graph.facebook.com/', 'post', {
-            id: [url],
-            scrape: true
-        }, function(response) {
-            console.log(response)
-            if(!response || response.error){
-                masterdfd.reject(response);
-            }else{
-                masterdfd.resolve(response);
-            }
-        });
-        return masterdfd;
     }
 
 
@@ -150,53 +156,15 @@ $('document').ready(function () {
         }
     }
 
-    // var url_to_scrap    =   $("#storage").attr('url');
-    // var img_url_scrap   =   $("#storage_image").attr('url');
-    // console.log(url_to_scrap);
-    // console.log(img_url_scrap);
-    //
-    // if(url_to_scrap != "" && url_to_scrap != undefined){
-    //     // $.post(
-    //     //     'https://graph.facebook.com/989506491086988',
-    //     //     {
-    //     //         id: url_to_scrap,
-    //     //         scrape: true
-    //     //     },
-    //     //     function(response){
-    //     //         console.log("SCRAP")
-    //     //         console.log(response);
-    //     //     }
-    //     // );
-    //     scrapeLink(url_to_scrap);
-    //     scrapeLink(img_url_scrap)
-    // }
-
-    //$('body').on('click','.btnShare',function (e) {
-
-
     $('.btnShare').click(function(){
-        //alert("SHARE")
         elem = $(this);
         postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
 
         return false;
     });
     $('#go-to-app').click(function(){
-    //$("body").on('click','#',function (e) {
         window.location.replace('/dash');
     });
-
-    //$("#goto").click(function () {
-        //alert("hh")
-
-        // setTimeout(function () {
-        //     $('html, body').animate({
-        //         scrollTop: $("#app-section").offset().top
-        //     }, 800);
-        // },5000)
-
-    //});
-
 
 
 });
