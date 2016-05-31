@@ -31,7 +31,9 @@ $('document').ready(function () {
             version    : 'v2.6',
             xfbml: true
         });
+        image   =   "http://games.angryclowns.com/images/giphy.gif";
         console.log(image)
+
         var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
         function callback(response){
             console.log(response)
