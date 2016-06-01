@@ -168,7 +168,7 @@ $('document').ready(function () {
 
             }
         });
-        //postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
+        postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
 
         return false;
     });
