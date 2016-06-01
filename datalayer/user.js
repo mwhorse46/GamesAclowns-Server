@@ -35,14 +35,16 @@ exports.addChoice   =   function (userInfo, callback) {
                 //
                 // })
                 sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
-                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
+                    console.log(choiceupdate)
+                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ? and pk_choiceid = ?',[userInfo.userid,choiceupdate.insertId],function (err, choices) {
                         callback(err,choices[0]);
                     });
                 })
 
             }else{
                 sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
-                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
+                    console.log(choiceupdate)
+                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ? and pk_choiceid = ?',[userInfo.userid,choiceupdate.insertId],function (err, choices) {
                         callback(err,choices[0]);
                     });
                 })
