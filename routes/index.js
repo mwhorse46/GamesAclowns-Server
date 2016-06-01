@@ -297,7 +297,7 @@ module.exports = function(passport){
 					choice.charimage	=	config.runningHost+"/images/"+charimage;
 					choice.og_image	=	config.runningHost+"/images/user/" + choice.userid + '_' + choice.pk_choiceid + ".png";
 					choice.redirect	=	config.runningHost + '/choosed/reaction/' + choice.userid + '/' + choice.pk_choiceid;
-					choices.choiceid	=	choice.pk_choiceid;
+					choice.choiceid	=	choice.pk_choiceid;
 					console.log("GENEREATE")
 					console.log(choice)
 					res.render('result_other',choice);
