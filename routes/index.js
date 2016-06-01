@@ -251,6 +251,7 @@ module.exports = function(passport){
 											choicesInfo.charimage	=	config.runningHost+"/images/"+charimage;
 											choicesInfo.redirect	=	config.runningHost + '/choosed/reaction/' + user.userid + '/' + choiceInfo.pk_choiceid;
 											choicesInfo.og_image	=	config.runningHost+"/images/user/" + user.userid + '_' + choiceInfo.pk_choiceid + ".png?z="+Math.floor(Math.random()*90000) + 10000;
+											choicesInfo.choiceid	=	choiceInfo.pk_choiceid;
 											console.log(choicesInfo);
 											res.render('result_test', choicesInfo);
 										});
@@ -296,6 +297,7 @@ module.exports = function(passport){
 					choice.charimage	=	config.runningHost+"/images/"+charimage;
 					choice.og_image	=	config.runningHost+"/images/user/" + choice.userid + '_' + choice.pk_choiceid + ".png";
 					choice.redirect	=	config.runningHost + '/choosed/reaction/' + choice.userid + '/' + choice.pk_choiceid;
+					choices.choiceid	=	choice.pk_choiceid;
 					console.log("GENEREATE")
 					console.log(choice)
 					res.render('result_other',choice);
@@ -311,11 +313,24 @@ module.exports = function(passport){
 		}
 	});
 
-	router.get('/layout',function (req, res) {
-		res.render('layout');
+	// router.get('/layout',function (req, res) {
+	// 	res.render('layout');
+	// });
+
+	router.post('/hitshare',isAuthenticated,function (req, res) {
+		console.log("hitshare")
+		console.log(req.body)
+		console.log(req.user);
+		console.log(req.user.userid);
+		if(req.body.choiceid && req.user.userid){
+
+			var info	=	{
+				choiceid:parseInt(req.body.choiceid),
+				userid:req.user.userid
+			};
+			userManager.removetempchoices(info)
+		}
 	});
-
-
 
 	router.get('/dash',
 		passport.authenticate('facebook', { scope : 'email' }

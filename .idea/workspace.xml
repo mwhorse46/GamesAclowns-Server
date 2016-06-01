@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="762eaf90-52e0-41d2-ab23-af1d594a4ca9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/user/1022780317759605_1.png" afterPath="$PROJECT_DIR$/public/images/user/1022780317759605_1.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/user/1022780317759605_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/user/1022780317759605_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/user/1022780317759605_4.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datalayer/user.js" afterPath="$PROJECT_DIR$/datalayer/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascript/home.js" afterPath="$PROJECT_DIR$/public/javascript/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/result_test.jade" afterPath="$PROJECT_DIR$/views/result_test.jade" />
     </list>
     <ignored path="passport-social-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,36 +33,36 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="195" column="33" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
+            <state relative-caret-position="220">
+              <caret line="330" column="33" selection-start-line="330" selection-start-column="33" selection-end-line="330" selection-end-column="33" />
               <folding>
-                <marker date="1464612991000" expanded="true" signature="6076:6099" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="6076:6128" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="6744:6806" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="6744:6812" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="6744:6854" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="6885:6961" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="6997:7037" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7114:7155" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7447:7468" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7483:7499" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7483:7594" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7609:7654" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7690:7774" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7795:7840" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="7915:7999" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="8020:8071" placeholder="..." />
-                <marker date="1464612991000" expanded="true" signature="9981:10841" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="6076:6099" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="6076:6128" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="6744:6806" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="6744:6812" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="6744:6854" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="6885:6961" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="6997:7037" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7114:7155" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7447:7468" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7483:7499" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7483:7594" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7609:7654" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7690:7774" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7795:7840" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="7915:7999" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="8020:8071" placeholder="..." />
+                <marker date="1464803301000" expanded="true" signature="10039:10943" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascript/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+            <state relative-caret-position="344">
+              <caret line="161" column="10" selection-start-line="161" selection-start-column="10" selection-end-line="161" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -66,8 +71,18 @@
       <file leaf-file-name="facebook.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/passport/facebook.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
+            <state relative-caret-position="450">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mysql-connector.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/mysql-connector.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -85,41 +100,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="result_other.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/result_other.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="285">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datalayer/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
+            <state relative-caret-position="-405">
               <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datalayer/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="46" column="163" selection-start-line="46" selection-start-column="163" selection-end-line="46" selection-end-column="163" />
+            <state relative-caret-position="59">
+              <caret line="82" column="54" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -128,7 +133,7 @@
       <file leaf-file-name="result.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/result.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-316">
+            <state relative-caret-position="270">
               <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding />
             </state>
@@ -138,8 +143,8 @@
       <file leaf-file-name="result_test.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/result_test.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="59" column="133" selection-start-line="58" selection-start-column="24" selection-end-line="59" selection-end-column="133" />
+            <state relative-caret-position="47">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -193,13 +198,10 @@
         <option value="$PROJECT_DIR$/public/javascript/admin.js" />
         <option value="$PROJECT_DIR$/utils/mysql-connector.js" />
         <option value="$PROJECT_DIR$/datalayer/admin.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/passport/facebook.js" />
         <option value="$PROJECT_DIR$/passport/init.js" />
         <option value="$PROJECT_DIR$/views/uploader.jade" />
         <option value="$PROJECT_DIR$/utils/mysqlConnection.js" />
-        <option value="$PROJECT_DIR$/public/javascript/home.js" />
         <option value="$PROJECT_DIR$/views/home.jade" />
         <option value="$PROJECT_DIR$/views/landing.jade" />
         <option value="$PROJECT_DIR$/views/result.jade" />
@@ -209,8 +211,11 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/views/result_test.jade" />
         <option value="$PROJECT_DIR$/views/result_other.jade" />
+        <option value="$PROJECT_DIR$/views/result_test.jade" />
+        <option value="$PROJECT_DIR$/public/javascript/home.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/datalayer/user.js" />
       </list>
     </option>
@@ -252,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,6 +327,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameAClowns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameAClowns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameAClowns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameAClowns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameAClowns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameAClowns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="passport" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -372,6 +426,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,12 +537,13 @@
       <workItem from="1464625815856" duration="3005000" />
       <workItem from="1464675185690" duration="4167000" />
       <workItem from="1464721507929" duration="3120000" />
-      <workItem from="1464758253722" duration="4156000" />
+      <workItem from="1464758253722" duration="6953000" />
+      <workItem from="1464796515439" duration="5776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140318000" />
+    <option name="totallyTimeSpent" value="148891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
@@ -728,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/mysql-connector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/mysqlConnection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -760,15 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascript/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,22 +830,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js" />
     <entry file="file://$PROJECT_DIR$/utils/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/passport/facebook.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/mysql-connector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -822,41 +882,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/passport/facebook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/result_test.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="59" column="133" selection-start-line="58" selection-start-column="24" selection-end-line="59" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/result.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
+        <state relative-caret-position="270">
           <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
           <folding />
         </state>
@@ -864,50 +892,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/result_other.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="285">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datalayer/admin.js">
+    <entry file="file://$PROJECT_DIR$/views/result_test.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        <state relative-caret-position="47">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="161" column="10" selection-start-line="161" selection-start-column="10" selection-end-line="161" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="195" column="33" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
+        <state relative-caret-position="220">
+          <caret line="330" column="33" selection-start-line="330" selection-start-column="33" selection-end-line="330" selection-end-column="33" />
           <folding>
-            <marker date="1464612991000" expanded="true" signature="6076:6099" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6076:6128" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6744:6806" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6744:6812" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6744:6854" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6885:6961" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6997:7037" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7114:7155" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7447:7468" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7483:7499" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7483:7594" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7609:7654" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7690:7774" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7795:7840" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7915:7999" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="8020:8071" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="9981:10841" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="6076:6099" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="6076:6128" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="6744:6806" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="6744:6812" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="6744:6854" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="6885:6961" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="6997:7037" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7114:7155" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7447:7468" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7483:7499" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7483:7594" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7609:7654" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7690:7774" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7795:7840" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="7915:7999" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="8020:8071" placeholder="..." />
+            <marker date="1464803301000" expanded="true" signature="10039:10943" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datalayer/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="46" column="163" selection-start-line="46" selection-start-column="163" selection-end-line="46" selection-end-column="163" />
+        <state relative-caret-position="59">
+          <caret line="82" column="54" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datalayer/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
           <folding />
         </state>
       </provider>

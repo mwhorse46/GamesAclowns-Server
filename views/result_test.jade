@@ -11,7 +11,7 @@ html(lang='en')
         link(rel='stylesheet', type='text/css', href='stylesheets/style_new.css')
         //link(rel='stylesheet', type='text/css', href='stylesheets/font-awesome.min.css')
         //link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
-    body(oncontextmenu="return false")
+    body(oncontextmenu="return true")
         #fb-root
         script.
             window.fbAsyncInit = function () {
@@ -29,6 +29,7 @@ html(lang='en')
             }());
         .storage#storage(url=redirect)
         .storage_image#storage_image(url=og_image)
+        .cache_choice#cache_choice(choice=choiceid)
         #blog(style='background: #00BCD4;')
             // Blog Content
             .container

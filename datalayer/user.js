@@ -25,7 +25,7 @@ exports.addChoice   =   function (userInfo, callback) {
 
     //getConnection(function (err, Connector) {
     sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
-            if(!err && choices != null && choices.length > 0){
+            //if(!err && choices != null && choices.length > 0){
                 // var choiceid    =   choices[0].pk_choiceid;
                 // sqlExecuteQueryHelper.executeQuery('update tbl_user_choices set ? where pk_choiceid = ?',[userInfo,choiceid],function (err, choiceupdate) {
                 //
@@ -36,20 +36,30 @@ exports.addChoice   =   function (userInfo, callback) {
                 // })
                 sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
                     console.log(choiceupdate)
-                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ? and pk_choiceid = ?',[userInfo.userid,choiceupdate.insertId],function (err, choices) {
-                        callback(err,choices[0]);
-                    });
-                })
 
-            }else{
-                sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
-                    console.log(choiceupdate)
-                    sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ? and pk_choiceid = ?',[userInfo.userid,choiceupdate.insertId],function (err, choices) {
-                        callback(err,choices[0]);
+                    //TODO: GET CHOICE ID, ADD TO TEMPORARY LIST
+
+                    var temp_info   =   {
+                        userid      :userInfo.userid,
+                        choiceid    :choiceupdate.insertId
+                    };
+                    sqlExecuteQueryHelper.executeQuery("insert into tbl_temp_choices set ?",[temp_info],function (err, tempinfo) {
+
+                        sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ? and pk_choiceid = ?', [userInfo.userid, choiceupdate.insertId], function (err, choices) {
+                            callback(err, choices[0]);
+                        });
                     });
-                })
-            }
-        })
+                });
+
+            // }else{
+            //     sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
+            //         console.log(choiceupdate)
+            //         sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ? and pk_choiceid = ?',[userInfo.userid,choiceupdate.insertId],function (err, choices) {
+            //             callback(err,choices[0]);
+            //         });
+            //     })
+            // }
+        });
     //})
 };
 
@@ -68,4 +78,24 @@ exports.getchoice   =   function (userinfo, callback) {
                     callback(true,false);
         })
     //})
-}
+};
+
+exports.removetempchoices   =   function (selectedinfo) {
+console.log(selectedinfo);
+    sqlExecuteQueryHelper.executeQuery("select * from tbl_temp_choices where userid = ? and choiceid != ?",
+        [selectedinfo.userid,selectedinfo.choiceid],function (err, status) {
+console.log(status)
+            var path = require('path');
+            var fs  =   require('fs');
+            for(var i in status) {
+                var newPath = path.dirname(__dirname) + "/public/images/user/"+status[i].userid+"_"+status[i].choiceid+".png";
+                console.log(newPath)
+                fs.unlink(newPath);
+
+            }
+            sqlExecuteQueryHelper.executeQuery("delete from tbl_temp_choices where userid = ? and choiceid != ?",[selectedinfo.userid,selectedinfo.choiceid],
+            function (err, status) {
+                console.log(status)
+            })
+        });
+};

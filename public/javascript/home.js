@@ -158,7 +158,17 @@ $('document').ready(function () {
 
     $('.btnShare').click(function(){
         elem = $(this);
-        postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
+        var choice  =   $("#cache_choice").attr("choice");
+        //alert(choice)
+        $.ajax({
+            url:'/hitshare',
+            type:'POST',
+            data:{choiceid:choice},
+            success:function (data) {
+
+            }
+        });
+        //postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
 
         return false;
     });
