@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="762eaf90-52e0-41d2-ab23-af1d594a4ca9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/mailer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/user/1022780317759605_1.png" afterPath="$PROJECT_DIR$/public/images/user/1022780317759605_1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/config.js" afterPath="$PROJECT_DIR$/utils/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/result_other.jade" afterPath="$PROJECT_DIR$/views/result_other.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/result_test.jade" afterPath="$PROJECT_DIR$/views/result_test.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datalayer/user.js" afterPath="$PROJECT_DIR$/datalayer/user.js" />
     </list>
     <ignored path="passport-social-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,6 +24,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="195" column="33" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
+              <folding>
+                <marker date="1464612991000" expanded="true" signature="6076:6099" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="6076:6128" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="6744:6806" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="6744:6812" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="6744:6854" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="6885:6961" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="6997:7037" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7114:7155" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7447:7468" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7483:7499" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7483:7594" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7609:7654" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7690:7774" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7795:7840" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="7915:7999" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="8020:8071" placeholder="..." />
+                <marker date="1464612991000" expanded="true" signature="9981:10841" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,41 +94,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gallery.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/gallery.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/home.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result_other.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result_other.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/result_other.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="617">
               <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/error.jade">
+      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datalayer/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="-135">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/datalayer/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -179,7 +192,6 @@
         <option value="$PROJECT_DIR$/public/javascript/admin.js" />
         <option value="$PROJECT_DIR$/utils/mysql-connector.js" />
         <option value="$PROJECT_DIR$/datalayer/admin.js" />
-        <option value="$PROJECT_DIR$/datalayer/user.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/passport/facebook.js" />
@@ -198,6 +210,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/result_test.jade" />
         <option value="$PROJECT_DIR$/views/result_other.jade" />
+        <option value="$PROJECT_DIR$/datalayer/user.js" />
       </list>
     </option>
   </component>
@@ -309,74 +322,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameAClowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="passport" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -391,7 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,12 +481,12 @@
       <workItem from="1464625815856" duration="3005000" />
       <workItem from="1464675185690" duration="4167000" />
       <workItem from="1464721507929" duration="3120000" />
-      <workItem from="1464758253722" duration="2933000" />
+      <workItem from="1464758253722" duration="3558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139095000" />
+    <option name="totallyTimeSpent" value="139720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
@@ -768,24 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datalayer/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/uploader.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datalayer/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -821,32 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2400">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="27" />
-          <folding>
-            <marker date="1464612991000" expanded="true" signature="6076:6099" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6076:6128" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6744:6806" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6744:6812" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6744:6854" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6885:6961" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="6997:7037" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7114:7155" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7447:7468" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7483:7499" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7483:7594" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7609:7654" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7690:7774" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7795:7840" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="7915:7999" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="8020:8071" placeholder="..." />
-            <marker date="1464612991000" expanded="true" signature="9981:10841" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,8 +863,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/result_other.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="617">
           <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datalayer/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="195" column="33" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
+          <folding>
+            <marker date="1464612991000" expanded="true" signature="6076:6099" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="6076:6128" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="6744:6806" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="6744:6812" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="6744:6854" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="6885:6961" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="6997:7037" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7114:7155" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7447:7468" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7483:7499" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7483:7594" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7609:7654" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7690:7774" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7795:7840" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="7915:7999" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="8020:8071" placeholder="..." />
+            <marker date="1464612991000" expanded="true" signature="9981:10841" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datalayer/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
           <folding />
         </state>
       </provider>

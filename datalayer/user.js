@@ -26,14 +26,20 @@ exports.addChoice   =   function (userInfo, callback) {
     //getConnection(function (err, Connector) {
     sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
             if(!err && choices != null && choices.length > 0){
-                var choiceid    =   choices[0].pk_choiceid;
-                sqlExecuteQueryHelper.executeQuery('update tbl_user_choices set ? where pk_choiceid = ?',[userInfo,choiceid],function (err, choiceupdate) {
-
+                // var choiceid    =   choices[0].pk_choiceid;
+                // sqlExecuteQueryHelper.executeQuery('update tbl_user_choices set ? where pk_choiceid = ?',[userInfo,choiceid],function (err, choiceupdate) {
+                //
+                //     sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
+                //         callback(err,choices[0]);
+                //     });
+                //
+                // })
+                sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
                     sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
                         callback(err,choices[0]);
                     });
-
                 })
+
             }else{
                 sqlExecuteQueryHelper.executeQuery('insert into tbl_user_choices set ?',[userInfo],function (err, choiceupdate) {
                     sqlExecuteQueryHelper.executeQuery('select * from tbl_user_choices where userid = ?',[userInfo.userid],function (err, choices) {
