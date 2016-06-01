@@ -98,9 +98,18 @@ app.use(function(err, req, res, next) {
     res.render('landing');
 });
 
+// var mailer  =   require("./utils/mailer");
+// mailer.sendMail("Server Started");
 
 process.on('uncaughtException', function(err) {
+    //err=    ""+err;
     console.log(err);
+    // if(err.indexOf("mail") == -1) {
+    //     var mailer = require("./utils/mailer");
+    //     mailer.sendMail(err);
+    // }else{
+    //     console.log("MAIL")
+    // }
 });
 
 

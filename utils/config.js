@@ -23,4 +23,13 @@ exports.mysqlDevConfig     =   {
     multipleStatements: true,
 };
 
+exports.MAIL_CONFIG         =   {
+    service: "Gmail",
+    auth: {
+        user: "angryclownsentertainment@gmail.com",
+        pass: "angry@1483"
+
+    }
+};
+
 exports.items_per_page  =   10;
