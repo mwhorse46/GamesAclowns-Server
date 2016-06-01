@@ -380,9 +380,9 @@ module.exports = function(passport){
 		res.redirect('/angryadmin');
 	});
 
-	router.get('/tests',function (req, res) {
-		res.render('gallery');
-	});
+	// router.get('/tests',function (req, res) {
+	// 	res.render('gallery');
+	// });
 
 
 	function reverse_id(n){
