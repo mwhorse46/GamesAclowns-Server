@@ -176,5 +176,33 @@ $('document').ready(function () {
         window.location.replace('/dash');
     });
 
+    var url_      = window.location.href;
+
+
+    if(url_.indexOf("/choosed/reaction" != -1))
+    {
+
+        var img_src =   $("#image_other").attr("src");
+        //alert(img_src)
+        checkImage(img_src);
+    }
+    function checkImage(src) {
+        // if(url_.indexOf("/choosed/reaction" != -1))
+        // {
+            var img = new Image();
+            img.onload = function () {
+
+            };
+            img.onerror = function () {
+
+                $("#image_other").attr("src","http://games.angryclowns.com/images/default.jpg")
+            };
+        //}
+
+        img.src = src; // fires off loading of image
+    }
+
+
+
 
 });
